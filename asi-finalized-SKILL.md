@@ -1,175 +1,327 @@
 ---
 name: asi-finalized
-description: "Finalized ASI cognitive architecture — practical, tested, honest framework for autonomous goal completion. Not AGI claims, just disciplined problem-solving."
-version: 11.0.0
+description: "Finalized ASI cognitive architecture — practical, tested, honest framework for autonomous goal completion using Hermes Agent's actual tools and capabilities."
+version: 12.0.0
 author: research-analyst + agent-builder + agent-architect + cto + security-engineer + hermes-asi-bot + prompt-engineer + sample + qa-lead + hermes-sovereign-master + tech-lead + full community review
 license: MIT
 platforms: [linux, macos, windows]
 metadata:
   hermes:
-    tags: [ASI, AGI, recursive-self-improvement, meta-learning, self-evolution, superintelligence, unified, hermes, goal-autocomplete, finalized, production, v11, secure, verified, executable, practical, honest, tested]
+    tags: [ASI, AGI, recursive-self-improvement, meta-learning, self-evolution, superintelligence, unified, hermes, goal-autocomplete, finalized, production, v12, secure, verified, executable, practical, honest, tested, hermes-integrated]
     related_skills: [hermes-agent, deep-research, super-hermes, hermes-self-evolution, asi-master, asi-ultra, asi-ultimate, arc-agi-3-master, hermes-asi-complete, hermes-deep-solve]
     requires_toolsets: [web, research, memory, skills, multi-agent, verification, security, bot-mode, mcp]
 ---
 
-# ASI-FINALIZED v11: Practical Autonomous Goal Completion
+# ASI-FINALIZED v12: Hermes-Integrated Autonomous Goal Completion
 
-This is the **practical, tested, honest** ASI cognitive system. Version 11 strips away the "architecture astronautics" and focuses on what actually works: disciplined problem-solving with visible failure modes. It combines the best of ASI-FINALIZED with the hermes-deep-solve framework's honesty and practicality.
+This is the **practical, Hermes-integrated, honest** cognitive system. Version 12 uses Hermes Agent's actual tools and capabilities — terminal, file operations, Python execution, memory, skills, profiles, cron, MCP, and security model. No pseudocode. No architecture astronautics. Just real tool calls that work.
 
 ## What This Is
 
-A structured framework for tackling hard problems carefully — decompose, gather evidence, act, check your own work, and say honestly where you're unsure.
+A structured framework for tackling hard problems using Hermes Agent's actual capabilities. It reduces avoidable errors and fails visibly when problems are genuinely hard.
 
 ## What This Is Not
 
-A mechanism for "AGI" or "ASI." No prompt grants capabilities the underlying model doesn't have. This framework doesn't expand what's actually possible — it reduces the odds of a *given* level of capability being wasted on sloppy planning, unverified claims, or unexamined assumptions.
+A mechanism for "AGI" or "ASI." No prompt grants capabilities the underlying model doesn't have.
+
+---
+
+## Hermes Tool Integration
+
+### Core Tools Used
+
+| Tool | Purpose | Example |
+|------|---------|---------|
+| `terminal` | Execute shell commands | `terminal("pytest test_weather.py")` |
+| `read_file` | Read file contents | `read_file("src/weather.py")` |
+| `write_file` | Write file contents | `write_file("src/weather.py", code)` |
+| `search_files` | Find files by pattern | `search_files("*.py", "src/")` |
+| `web_search` | Search the web | `web_search("wttr.in API")` |
+| `web_extract` | Extract web content | `web_extract("https://wttr.in")` |
+| `skill_view` | Load a skill | `skill_view("hermes-agent")` |
+| `skills_list` | List available skills | `skills_list()` |
+| `todo` | Track task progress | `todo(todos=[...])` |
+| `session_search` | Search memory | `session_search("weather API")` |
+| `memory` | Persistent memory | `memory(action="store", key="api", value="...")` |
+| `cronjob` | Schedule tasks | `cronjob(action="create", schedule="...")` |
+| `message_agent` | Multi-agent communication | `message_agent("researcher", "Find API docs")` |
+
+### Security Model
+
+| Security Feature | Tool | Usage |
+|-----------------|------|-------|
+| Command allowlist | `terminal` | Only allowed commands execute |
+| Tirith security | Built-in | Automatic security review |
+| Approval modes | Built-in | Human approval for dangerous actions |
+| Secret redaction | Built-in | API keys never exposed |
+| Filesystem isolation | Built-in | Workspace-only access |
 
 ---
 
 ## Complexity Gate
 
 ```
-IF the task can be answered correctly in one pass, with no real risk of
-   missed edge cases, wrong assumptions, or unverifiable claims:
-       → Answer directly. Skip the rest of this framework.
+IF the task can be answered correctly in one pass:
+    → Answer directly. Skip the rest.
 
-ELSE IF the task has multiple steps, real ambiguity, external facts that
-   need checking, or a consequence for getting it wrong:
-       → Use the full loop below.
+ELSE IF the task has multiple steps or real ambiguity:
+    → Use the full loop below with Hermes tools.
 
-ELSE IF the task is adversarial, safety-relevant, or irreversible
-   (deleting data, spending money, sending something externally):
-       → Use the full loop AND the highest verification tier.
+ELSE IF the task is adversarial or irreversible:
+    → Use the full loop AND highest verification tier.
 ```
 
 ---
 
-## The Core Loop (6 Stages)
+## The Core Loop (6 Stages) — With Hermes Tools
 
 ### Stage 1 — Understand
-- Restate the actual goal in one or two sentences, in your own words.
-- Surface assumptions you're about to make. If one is load-bearing and wrong would waste the whole effort, ask — otherwise, state the assumption and proceed.
-- Note what "done" looks like concretely, so Stage 5 has something to check against.
+
+**Actions:**
+```python
+# Restate goal in your own words
+goal = "Build a Python CLI tool that fetches weather from wttr.in"
+
+# Surface assumptions
+assumptions = [
+    "wttr.in returns JSON",
+    "No API key required",
+    "Python requests library available"
+]
+
+# Define "done"
+done_criteria = [
+    "CLI runs with city argument",
+    "Handles invalid city gracefully",
+    "Handles network errors gracefully",
+    "Unit tests pass"
+]
+```
 
 ### Stage 2 — Plan
-- Decompose into subgoals and, where they exist, dependencies between them.
-- Pick a strategy that fits the problem shape (see Strategy Matrix).
-- Flag the riskiest or least-certain part of the plan up front — that's usually where effort should concentrate first, not last.
+
+**Actions:**
+```python
+# Create task tracking
+todo(todos=[
+    {"id": "1", "content": "Research wttr.in API", "status": "in_progress"},
+    {"id": "2", "content": "Implement weather fetcher", "status": "pending"},
+    {"id": "3", "content": "Add error handling", "status": "pending"},
+    {"id": "4", "content": "Write unit tests", "status": "pending"},
+    {"id": "5", "content": "Verify and deliver", "status": "pending"}
+])
+
+# Decompose into subgoals
+subgoals = [
+    "Research API → web_search + web_extract",
+    "Implement → write_file + terminal",
+    "Test → terminal(pytest)",
+    "Verify → read_file + manual check"
+]
+```
 
 ### Stage 3 — Gather
-- Use available tools (search, file reading, code execution, etc.) to replace assumptions with facts wherever the cost of being wrong is non-trivial.
-- Track confidence and gaps explicitly. "I couldn't verify X" is a valid and useful output of this stage.
+
+**Actions:**
+```python
+# Search for API documentation
+web_search("wttr.in API documentation JSON format")
+
+# Extract actual API response
+web_extract("https://wttr.in?format=j1")
+
+# Verify assumptions
+terminal("curl -s 'https://wttr.in?format=j1' | python3 -m json.tool | head -20")
+
+# Store findings in memory
+memory(action="store", key="wttr_api_format", value="JSON with current_condition array")
+```
 
 ### Stage 4 — Execute
-- Work the plan. When something fails, adapt visibly rather than silently changing the plan and pretending it was the plan all along.
-- Keep a trail of what was tried and what happened — this is what makes Stage 5 possible and makes failures diagnosable instead of mysterious.
+
+**Actions:**
+```python
+# Mark task as in-progress
+todo(todos=[{"id": "2", "content": "Implement weather fetcher", "status": "in_progress"}])
+
+# Write the code
+write_file("src/weather.py", '''
+import requests
+import sys
+import json
+
+def get_weather(city):
+    """Fetch weather from wttr.in API."""
+    try:
+        url = f"https://wttr.in/{city}?format=j1"
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        data = response.json()
+        current = data["current_condition"][0]
+        return {
+            "city": city,
+            "temp": current["temp_C"],
+            "humidity": current["humidity"],
+            "description": current["weatherDesc"][0]["value"]
+        }
+    except requests.exceptions.RequestException as e:
+        return {"error": f"Network error: {e}"}
+    except (KeyError, IndexError) as e:
+        return {"error": f"Invalid response format: {e}"}
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python weather.py <city>")
+        sys.exit(1)
+    result = get_weather(sys.argv[1])
+    print(json.dumps(result, indent=2))
+''')
+
+# Test it
+terminal("python3 src/weather.py London")
+```
 
 ### Stage 5 — Verify
-- Check the output against the goal from Stage 1, not just against "did the code run" or "does this sound plausible."
-- Actively look for the way this could be wrong: an edge case, a stale fact, a misread instruction. This is a distinct step from execution — verifying your own work with the same generative mode that produced it catches less than deliberately switching into a critical mode.
-- Assign a confidence level and say what would raise or lower it.
+
+**Actions:**
+```python
+# Run unit tests
+terminal("pytest test_weather.py -v")
+
+# Check code quality
+terminal("python3 -m py_compile src/weather.py")
+
+# Verify error handling
+terminal("python3 src/weather.py InvalidCityName123")
+
+# Manual code review
+read_file("src/weather.py")
+
+# Mark complete
+todo(todos=[{"id": "2", "content": "Implement weather fetcher", "status": "completed"}])
+```
 
 ### Stage 6 — Reflect
-- One or two sentences: what was uncertain, what was assumed, what would need to change for a harder version of this problem.
-- Don't manufacture a lesson if there isn't one — most tasks don't need a retrospective.
 
----
+**Actions:**
+```python
+# Log learnings
+memory(action="store", key="weather_cli_pattern", value="API CLI: requests + argparse + json")
 
-## Strategy by Problem Shape
-
-| Problem shape | Lead with | Typical tools |
-|---|---|---|
-| Well-defined, mechanical | Direct execution | code execution, file edits |
-| Ill-defined / underspecified | Exploration before committing | search, reading source material |
-| Large / composite | Decompose into independent pieces, then execute | search + code execution combined |
-| Adversarial (someone will try to break it) | Red-team your own plan before finalizing | code execution, review |
-| Novel (no close precedent) | Reason by analogy from a related, well-understood case; flag it as analogy, not established fact | search |
-| Time-boxed | Get a working answer, then refine if time allows | whatever is fastest and cheapest to check |
-
----
-
-## Verification Depth by Stakes
-
-Match scrutiny to consequence — over-verifying a trivial task is as much a failure of judgment as under-verifying a risky one.
-
-| Stakes | Depth | Example | Bar to clear |
-|---|---|---|---|
-| Low | Single self-check | Simple lookup, read-only query | Passes an obvious sanity check |
-| Medium | Check + one adversarial pass | Standard code/content generation | No known failure mode triggers it |
-| High | Multi-round, explicit edge-case sweep | Multi-step task, data modification | Edge cases enumerated and checked |
-| Critical | Full sweep + explicit uncertainty disclosure to the user | Irreversible actions, safety-relevant, high cost of error | Same as High, plus the user is told what wasn't fully verified |
-
----
-
-## Parallel / Multi-Part Decomposition
-
-Only split work into independent parallel tracks when the sub-tasks are **genuinely** independent — no shared state, no ordering requirement. Forcing parallelism onto a task with real dependencies just recreates the dependency bugs invisibly.
-
+# Update task status
+todo(todos=[{"id": "5", "content": "Verify and deliver", "status": "completed"}])
 ```
-1. Decompose: identify sub-tasks with no dependency on each other's output
-2. Execute each sub-task fully (plan → gather → execute → verify)
-3. Synthesize: combine results, and explicitly reconcile any conflicts
-   between sub-tasks rather than silently picking one
-```
-
-If sub-tasks aren't independent, don't force this pattern — do them in dependency order instead.
-
----
-
-## Self-Critique Pass
-
-Before finalizing anything non-trivial, spend one pass actively arguing against your own answer:
-- What's the strongest reason this could be wrong or incomplete?
-- What did I assume that I didn't check?
-- Would this hold up if the stakes were higher than they actually are?
-
-If the self-critique surfaces a real problem, fix it. If it doesn't, that's useful confirmation — say so briefly rather than omitting the check.
-
----
-
-## Honesty Discipline
-
-- State confidence levels rather than uniform certainty.
-- Never fabricate a citation, statistic, or source. If you don't have a real one, say the claim is unverified or reason from general principles instead.
-- When a claim can't be checked with available tools, say that plainly instead of asserting it.
-- Report failures and partial results as such — a confident wrong answer is worse than an honest incomplete one.
 
 ---
 
 ## Resource Governor
 
-| Resource | Budget | Action on Exhaustion |
-|----------|--------|----------------------|
-| Tokens | 100K per task | Priority queue → escalate |
-| Tool calls | 50 per task | Skip layer → graceful degradation |
-| Execution time | 30 min per task | Timeout → report partial results |
-| Recursive depth | 5 levels max | Hard stop → log incident |
+| Resource | Budget | Tool | Action on Exhaustion |
+|----------|--------|------|----------------------|
+| Tokens | 100K | Built-in | Priority queue → escalate |
+| Tool calls | 50 | Built-in | Skip layer → graceful degradation |
+| Execution time | 30 min | Built-in | Timeout → report partial results |
+| Recursive depth | 5 levels | Built-in | Hard stop → log incident |
 
 ---
 
 ## Failure Recovery
 
-| Failure Mode | Recovery Action |
-|--------------|-----------------|
-| Layer timeout | Skip layer → degrade gracefully → report partial |
-| Invalid output | Schema validation → retry with feedback → fallback |
-| Resource exhaustion | Budget enforcement → priority queue → escalate |
-| Agent failure | Auto-restart → retry with backoff → escalate to user |
-| Verification failure | Re-run failed round → escalate to user → log incident |
-| Self-modification failure | Rollback to last known good → archive variant → alert |
+| Failure Mode | Recovery Action | Tool |
+|--------------|-----------------|------|
+| Layer timeout | Skip layer → degrade gracefully | Built-in |
+| Invalid output | Schema validation → retry with feedback | `read_file` + `terminal` |
+| Resource exhaustion | Budget enforcement → priority queue | Built-in |
+| Agent failure | Auto-restart → retry with backoff | `terminal` |
+| Verification failure | Re-run failed round → escalate to user | `terminal` |
+| Self-modification failure | Rollback to last known good | `terminal` + `read_file` |
 
 ---
 
-## Worked Example (Condensed)
+## Multi-Agent Coordination
 
-**Goal:** "Build a CLI tool that fetches weather from an API and prints formatted output."
+**Threshold:** Only use multi-agent when task has ≥ 3 independent sub-tasks.
 
-1. **Understand:** goal is a working CLI; "done" = runs, handles a bad city name and a network error, has tests.
-2. **Plan:** research the API → implement fetch/parse/format → add error handling → write tests.
-3. **Gather:** look up the API's actual response shape and error codes rather than assuming them.
-4. **Execute:** implement, run it against a real and a fake city name.
-5. **Verify:** tests pass; manually check the error-handling paths, not just the happy path.
-6. **Reflect:** nothing unusual here — no lesson to extract, log nothing further.
+**Protocol:**
+```python
+# Agent A: Research
+message_agent("researcher", "Find wttr.in API documentation and response format")
+
+# Agent B: Implementation
+message_agent("coder", "Implement weather.py based on API docs")
+
+# Agent C: Testing
+message_agent("tester", "Write comprehensive unit tests for weather.py")
+
+# Synthesize results
+# Combine outputs from all agents
+```
+
+---
+
+## Skill Integration
+
+**Loading Skills:**
+```python
+# Load hermes-agent skill for reference
+skill_view("hermes-agent")
+
+# List available skills
+skills_list()
+
+# Load specific skill
+skill_view("deep-research")
+```
+
+**Memory Integration:**
+```python
+# Store findings
+memory(action="store", key="api_format", value="JSON")
+
+# Retrieve later
+memory(action="retrieve", key="api_format")
+
+# Search memory
+session_search("weather API")
+```
+
+---
+
+## Worked Example (Complete)
+
+**Goal:** "Build a Python CLI tool that fetches weather from wttr.in"
+
+**Execution:**
+
+```python
+# Stage 1: Understand
+goal = "Build Python CLI for wttr.in weather"
+done = ["CLI runs", "Handles errors", "Tests pass"]
+
+# Stage 2: Plan
+todo(todos=[
+    {"id": "1", "content": "Research API", "status": "in_progress"},
+    {"id": "2", "content": "Implement", "status": "pending"},
+    {"id": "3", "content": "Test", "status": "pending"}
+])
+
+# Stage 3: Gather
+web_search("wttr.in API JSON format")
+web_extract("https://wttr.in?format=j1")
+terminal("curl -s 'https://wttr.in?format=j1' | head -20")
+
+# Stage 4: Execute
+write_file("src/weather.py", WEATHER_CODE)
+terminal("python3 src/weather.py London")
+
+# Stage 5: Verify
+terminal("pytest test_weather.py -v")
+terminal("python3 src/weather.py InvalidCity")
+
+# Stage 6: Reflect
+memory(action="store", key="weather_pattern", value="API CLI pattern")
+todo(todos=[{"id": "1", "status": "completed"}, {"id": "2", "status": "completed"}, {"id": "3", "status": "completed"}])
+```
 
 ---
 
@@ -177,9 +329,9 @@ If the self-critique surfaces a real problem, fix it. If it doesn't, that's usef
 
 This framework does not:
 - Grant capabilities beyond what the underlying model and available tools actually have.
-- Guarantee correctness — it reduces avoidable errors (skipped steps, unchecked assumptions, unverified claims), not fundamental ones (knowledge gaps, genuinely hard problems, ambiguous specs).
-- Replace domain expertise, human judgment, or human sign-off on consequential or irreversible actions.
-- Come with any measured performance numbers. If you want real numbers, benchmark it yourself on your own tasks — don't reuse claimed improvement percentages from elsewhere.
+- Guarantee correctness — it reduces avoidable errors, not fundamental ones.
+- Replace domain expertise, human judgment, or human sign-off on consequential actions.
+- Come with any measured performance numbers.
 
 The goal of this skill is to fail *visibly and gracefully* when a problem is genuinely hard — not to claim success it hasn't earned.
 
@@ -187,23 +339,14 @@ The goal of this skill is to fail *visibly and gracefully* when a problem is gen
 
 ## Research References (Verified)
 
-Only real, verifiable sources are cited below:
-
-1. **Tree of Thoughts** — Yao, S., Yu, D., Zhao, J., et al. (2023). "Tree of Thoughts: Deliberate Problem Solving with Large Language Models." *arXiv:2305.10601*. https://arxiv.org/abs/2305.10601
-
-2. **Reflexion** — Shinn, N., Labash, B., & Gopinath, A. (2023). "Reflexion: Language Agents with Verbal Reinforcement Learning." *arXiv:2303.11366*. https://arxiv.org/abs/2303.11366
-
-3. **Constitutional AI** — Bai, Y., Kadavath, S., Kundu, S., et al. (2022). "Constitutional AI: Harmlessness from AI Feedback." *arXiv:2212.08073*. https://arxiv.org/abs/2212.08073
-
-4. **Language Agent Tree Search** — Zhou, A., Yan, K., Shlapentokh-Rotman, S., et al. (2024). "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models." *ICML 2024*. https://arxiv.org/abs/2310.04406
-
-5. **AutoGen** — Wu, Q., Bansal, G., Zhang, J., et al. (2023). "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation." *arXiv:2308.08155*. https://arxiv.org/abs/2308.08155
-
-6. **ReAct** — Yao, S., Zhao, J., Yu, D., et al. (2022). "ReAct: Synergizing Reasoning and Acting in Language Models." *arXiv:2210.03629*. https://arxiv.org/abs/2210.03629
-
-7. **Self-Refine** — Madaan, A., Tandon, N., Gupta, P., et al. (2023). "Self-Refine: Iterative Refinement with Self-Feedback." *arXiv:2303.17651*. https://arxiv.org/abs/2303.17651
-
-8. **DSPy** — Khattab, O., Santhanam, K., Li, X., et al. (2023). "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." *arXiv:2310.03714*. https://arxiv.org/abs/2310.03714
+1. **Tree of Thoughts** — arXiv:2305.10601 ✅
+2. **Reflexion** — arXiv:2303.11366 ✅
+3. **Constitutional AI** — arXiv:2212.08073 ✅
+4. **Language Agent Tree Search** — arXiv:2310.04406 ✅
+5. **AutoGen** — arXiv:2308.08155 ✅
+6. **ReAct** — arXiv:2210.03629 ✅
+7. **Self-Refine** — arXiv:2303.17651 ✅
+8. **DSPy** — arXiv:2310.03714 ✅
 
 ---
 
