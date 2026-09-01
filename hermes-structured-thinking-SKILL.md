@@ -1,238 +1,204 @@
 ---
 name: hermes-structured-thinking
-description: "A disciplined thinking framework for Hermes Agent. Provides structured problem-solving with 7 stages, 6 analytical lenses, and 4 verification tiers. NOT AGI. NOT autonomous. Just better thinking."
-version: 3.0.0
+description: "A disciplined problem-solving framework for Hermes Agent. Provides structured thinking with 5 phases, 6 analytical lenses, and honest limits. NOT AGI. NOT autonomous. Just better thinking."
+version: 4.0.0
 author: research-analyst + agent-builder + 10+ agent consensus
 license: MIT
 platforms: [linux, macos, windows]
 metadata:
   hermes:
-    tags: [cognitive-framework, problem-solving, structured-thinking, hermes, verified, honest, practical, consensus, working-implementation]
+    tags: [cognitive-framework, problem-solving, structured-thinking, hermes, verified, honest, practical, consensus]
     related_skills: [hermes-agent, hermes-deep-solve, hermes-deep-solve-advanced]
     requires_toolsets: [web, research, memory, skills, multi-agent, verification]
 ---
 
-# Hermes Structured Thinking Framework v3.0
+# Hermes Structured Thinking v4.0
 
-**HONEST DISCLAIMER:** This is a **thinking framework**, not an AI system. It provides structured problem-solving discipline for Hermes Agent. It does NOT grant superhuman intelligence or autonomous goal completion.
-
-## What 10+ AI Agents Agreed On
-
-| Principle | Consensus |
-|-----------|-----------|
-| Name | hermes-structured-thinking |
-| Nature | Framework, not AI system |
-| Claims | No AGI/ASI claims |
-| Citations | Verified only |
-| Implementation | Needs real code |
-| Honesty | Confidence levels, not certainty |
+**HONEST DISCLAIMER:** This is a **thinking framework**, not an AI system. It provides structured problem-solving discipline. It does NOT grant superhuman intelligence.
 
 ---
 
-## Complexity Gate
+## The 5-Phase Protocol
 
-```
-IF task is simple (< 300 lines, single domain):
-    → Use Fast Path: Plan → Execute → Test
+### Phase 1 — ANALYZE
 
-ELSE IF task is complex (multi-step, ambiguous, high-stakes):
-    → Use Full 5-Stage Loop
+**Goal:** Understand what's being asked and surface assumptions.
 
-ELSE IF task is critical (irreversible, safety-relevant):
-    → Use Full Loop + Tier 4 Verification + Human Approval
-```
+**Actions:**
+1. Restate the goal in one sentence
+2. List assumptions (mark load-bearing ones)
+3. Define "done" concretely
+4. Classify complexity (simple/medium/complex)
+5. Pick 2-3 analytical lenses:
 
-### Fast Path (Simple Tasks)
-
-1. **Plan** — Decompose into tasks
-2. **Execute** — Build incrementally
-3. **Test** — Verify it works
-
-### Full 5-Stage Loop (Complex Tasks)
-
-#### Stage 1 — Understand
-- Restate the actual goal in your own words
-- Separate what's specified from what's assumed
-- Define "done" concretely
-
-#### Stage 2 — Plan + Analyze
-- Decompose into subgoals and tasks
-- Pick a decomposition shape (sequential, parallel, pipeline)
-- Apply 2-3 analytical lenses:
-
-| Lens | Question | Good for |
+| Lens | Question | Use When |
 |------|----------|----------|
-| Structural | Parts and connections? | Systems, code |
-| Causal | What causes what? | Debugging |
-| Temporal | Sequence and timing? | Planning |
-| Comparative | vs similar cases? | Decisions |
-| Adversarial | How could it fail? | Security |
-| Counterfactual | If assumption false? | Novel problems |
+| Structural | What are the parts? | Systems, code, architecture |
+| Causal | What causes what? | Debugging, root-cause |
+| Temporal | What's the sequence? | Planning, scheduling |
+| Comparative | vs similar things? | Decisions, evaluation |
+| Adversarial | How could it fail? | Security, robustness |
+| Counterfactual | If assumption false? | Novel problems, risk |
 
-#### Stage 3 — Gather + Execute
-- Replace assumptions with evidence
-- Work the plan, adapt visibly on failure
-- Keep a trail of what was tried
+**Output:** Goal classification + definition of done + lens selection
 
-#### Stage 4 — Verify
-Match depth to stakes:
+### Phase 2 — PLAN
 
-| Tier | Trigger | Depth |
-|------|---------|-------|
-| 1 — Light | Low stakes | Self-check |
-| 2 — Standard | Medium stakes | + adversarial pass |
-| 3 — Full | High stakes | + edge cases |
-| 4 — Critical | Irreversible | + disclosure + human approval |
+**Goal:** Decompose into executable sub-tasks.
 
-**Tier Selection Rule:**
-- Read-only queries → Tier 1
-- Standard code/content → Tier 2
-- Data modification → Tier 3
-- Irreversible/safety → Tier 4
+**Actions:**
+1. Create dependency graph (which tasks need which)
+2. Identify independent sub-tasks (can parallelize)
+3. Estimate tool calls per sub-task
+4. Set verification tier per sub-task:
 
-#### Stage 5 — Reflect
-- One or two honest sentences
-- What was uncertain, what to learn
-- Skip if nothing to say
+| Tier | When | Depth |
+|------|------|-------|
+| 1 — Light | Read-only, trivial | Self-check |
+| 2 — Medium | Standard code/content | + adversarial pass |
+| 3 — High | Data modification | + edge cases |
+| 4 — Critical | Irreversible/safety | + human disclosure |
+
+5. Create Hermes `todo` list
+
+**Output:** Todo list with dependencies + verification tiers
+
+### Phase 3 — EXECUTE
+
+**Goal:** Work the plan with visible progress.
+
+**Actions:**
+1. Mark current task as in_progress via `todo`
+2. Execute sub-task using Hermes tools
+3. On failure: retry once with adapted approach
+4. On second failure: escalate to user
+5. Mark task completed/failed via `todo`
+6. Log evidence trail (what was tried, what happened)
+
+**Max 2 retries per sub-task. Then escalate.**
+
+**Rules:**
+- Never silently change the plan
+- Always log what was tried
+- Stop if cost of being wrong exceeds cost of asking
+
+### Phase 4 — VERIFY
+
+**Goal:** Prove it works, not just "looks right."
+
+**Actions:**
+1. Run each sub-task's verification:
+   - Tier 1: Basic sanity check
+   - Tier 2: + adversarial self-critique
+   - Tier 3: + edge case enumeration
+   - Tier 4: + disclosure of what wasn't checked
+2. Check output against definition of done (Phase 1)
+3. If verification fails: fix and re-verify
+4. Max 2 verification cycles per sub-task
+
+**Rules:**
+- Never claim success without running the code
+- A confident wrong answer beats an honest incomplete one
+- Gaps get stated, not smoothed over
+
+### Phase 5 — REPORT
+
+**Goal:** Deliver results with evidence.
+
+**Actions:**
+1. Summarize what was done (with evidence trail)
+2. State confidence level (with reason)
+3. List what wasn't verified (if Tier 4)
+4. Save learnings to `memory` for future sessions
+5. Mark all todos complete
+
+**Output:** Structured result with confidence + evidence + limitations
 
 ---
 
-## Working Implementations
+## Hermes Integration
 
-This framework has been tested and proven with real working implementations:
+**Required Tools:**
 
-| Repository | Tests | Coverage | Purpose |
-|------------|-------|----------|---------|
-| [goal-autocomplete-engine](https://github.com/itsPremkumar/goal-autocomplete-engine) | 65 | 97.29% | Full 6-layer, 40-plane implementation |
-| [asi-real-skill](https://github.com/itsPremkumar/asi-real-skill) | 44 | 87.62% | 5-stage loop with Hermes tool integration |
-| [hermes-agi-asi-harness](https://github.com/itsPremkumar/hermes-agi-asi-harness) | 24 | — | Delegate Task Diagnostic Tool |
+| Tool | Usage |
+|------|-------|
+| `todo` | Track sub-task progress |
+| `memory` | Save/retrieve learnings |
+| `session_search` | Find past solutions |
+| `message_agent` | Delegate to specialists |
+| `terminal` | Execute commands |
+| `read_file` / `write_file` | File operations |
+| `search_files` | Find files by pattern |
+| `web_search` / `web_extract` | Research |
 
----
-
-## Adversarial Self-Critique
-
-Run **once** before finalizing. Fix issues found. If none found, say so briefly.
-
-- Steelman the opposite conclusion
-- Find unchecked assumptions
-- Check second-order effects
-
----
-
-## Decomposition Patterns
-
-| Pattern | When to use | Shape |
-|---------|-------------|-------|
-| Sequential | Steps depend on prior output | A → B → C |
-| Parallel-independent | ≥3 sub-tasks share no state | Run concurrently |
-| Pipeline | Each stage transforms the last | Gather → transform → validate |
-| Divide-and-conquer | Same operation on many items | Split by item, recombine |
-| Exploratory-then-committed | Too undefined to plan up front | Narrow, then plan |
+**Delegation Rules:**
+- Only delegate when ≥3 independent sub-tasks exist
+- Each specialist gets full context + definition of done
+- Synthesize results explicitly (don't silently pick one)
 
 ---
 
-## Failure Modes & Recovery
+## Failure-First Design
 
-| Failure mode | Recovery |
-|--------------|----------|
-| Invalid result | Retry or state failure |
-| Out of ideas | Step back with different lens |
-| Contradictory results | Reconcile explicitly |
+Every phase includes what could go wrong and how to recover.
+
+| Failure | Recovery |
+|---------|----------|
+| Task produces invalid result | Retry with corrected approach |
+| Out of ideas mid-plan | Step back to ANALYZE with different lens |
+| Sub-task results contradict | Reconcile explicitly |
 | Genuinely stuck | Hand back clear partial result |
+| Verification fails twice | Escalate to user |
+
+**Escalation Triggers:**
+- Goal is ambiguous and clarify doesn't resolve it
+- Verification fails twice on the same step
+- Task requires credentials/permissions you don't have
+- Cost of being wrong exceeds cost of asking
 
 ---
 
-## Honesty Discipline
+## Honest Expectations
 
-- Confidence levels, not uniform certainty
-- No fabricated citations, statistics, or sources
-- Gaps stated, not smoothed over
-- A clearly-flagged incomplete result beats a confident wrong one
-- **"I don't know" is always a valid answer**
+| Metric | Target | Measurement |
+|--------|--------|-------------|
+| Completion rate | 70-85% | Tasks completed without escalation |
+| False success rate | <5% | Tasks marked done but actually broken |
+| Verification coverage | 100% | All tier requirements met |
 
----
-
-## Escalation: When to Ask vs. Proceed
-
-```
-IF assumption is load-bearing AND getting it wrong would waste effort:
-    → Ask one focused clarifying question
-ELSE:
-    → State the assumption plainly and proceed
-```
+**These are targets, not guarantees. Benchmark on your own tasks.**
 
 ---
 
-## Domain Playbooks
+## What This Framework Does NOT Do
 
-- **Coding:** structural + adversarial; test failure paths
-- **Research:** comparative + causal; cross-check facts
-- **Decisions:** comparative + counterfactual; state criteria first
-- **Debugging:** causal first; reproduce before theorizing
-- **Creative:** counterfactual + comparative; verify against brief
-
----
-
-## Worked Example — Simple CLI Tool
-
-**Goal:** "Build a CLI that fetches weather from wttr.in"
-
-**Fast Path used** (task < 300 lines):
-
-1. **Plan:** research API → implement → test
-2. **Execute:** write code, run it
-3. **Test:** pytest + manual check
-
-**Result:** Production-ready tool, 24 tests, 632 lines.
-
----
-
-## Worked Example — Complex Task
-
-**Goal:** "Evaluate 3 database migration strategies for production"
-
-**Full 5-stage loop:**
-
-1. **Understand:** Recommendation with trade-offs, not just preference
-2. **Plan:** Parallel-independent (each strategy analyzed separately)
-3. **Analyze:** Comparative + counterfactual + adversarial lenses
-4. **Gather:** Find real precedent for each strategy
-5. **Execute:** Score against criteria defined before looking at options
-6. **Verify (Tier 3):** Enumerate failure modes of recommended strategy
-7. **Reflect:** Recommendation conditional on downtime assumption
-
----
-
-## Limits (Read This Part)
-
-This framework does NOT:
-- Grant capabilities beyond what the underlying model and tools actually have
-- Guarantee correctness — reduces avoidable errors, not fundamental ones
-- Replace domain expertise, human judgment, or human sign-off
-- Come with measured performance numbers
-- Integrate with Hermes tools automatically
+- ❌ Grant capabilities beyond the model + tools
+- ❌ Guarantee correctness on genuinely hard problems
+- ❌ Replace domain expertise or human judgment
+- ❌ Come with measured performance numbers
+- ❌ Make Hermes "AGI"
 
 The goal is to fail **visibly and gracefully** on hard problems — not to claim success it hasn't earned.
 
 ---
 
-## Research References (Verified)
+## Working Implementations
 
-1. **Tree of Thoughts** — arXiv:2305.10601
-2. **Reflexion** — arXiv:2303.11366
-3. **Constitutional AI** — arXiv:2212.08073
-4. **Language Agent Tree Search** — arXiv:2310.04406
-5. **AutoGen** — arXiv:2308.08155
-6. **ReAct** — arXiv:2210.03629
-7. **Self-Refine** — arXiv:2303.17651
-8. **DSPy** — arXiv:2310.03714
+| Repository | Tests | Coverage | Purpose |
+|------------|-------|----------|---------|
+| [goal-autocomplete-engine](https://github.com/itsPremkumar/goal-autocomplete-engine) | 65 | 97% | Full 6-layer implementation |
+| [asi-real-skill](https://github.com/itsPremkumar/asi-real-skill) | 44 | 87% | 5-stage loop |
+| [hermes-agi-asi-harness](https://github.com/itsPremkumar/hermes-agi-asi-harness) | 24 | — | Delegate Task Diagnostic |
 
 ---
 
-## The Bottom Line
+## Research References (Verified)
 
-**This is a thinking framework.** It will help with simple-to-medium tasks. It will NOT autonomously complete complex goals.
-
-**Status:** Design document with 3 working implementations (goal-autocomplete-engine, asi-real-skill, hermes-agi-asi-harness).
-
-**Consensus:** Accepted by 10+ AI agents after iterative review.
+1. Tree of Thoughts — arXiv:2305.10601
+2. Reflexion — arXiv:2303.11366
+3. Constitutional AI — arXiv:2212.08073
+4. Language Agent Tree Search — arXiv:2310.04406
+5. AutoGen — arXiv:2308.08155
+6. ReAct — arXiv:2210.03629
+7. Self-Refine — arXiv:2303.17651
+8. DSPy — arXiv:2310.03714
