@@ -1,20 +1,20 @@
 ---
 name: asi-finalized
-description: "Finalized ASI cognitive architecture — 5-layer production system with orchestration, plane selection, failure recovery, security, resource governance, goal autocompletion."
-version: 5.0.0
-author: research-analyst + agent-builder + agent-architect + cto + security-engineer + hermes-asi-bot
+description: "Finalized ASI cognitive architecture — 35 planes, 5-layer production system, security-hardened, resource-governed, goal autocompletion."
+version: 6.0.0
+author: research-analyst + agent-builder + agent-architect + cto + security-engineer + hermes-asi-bot + full community review
 license: MIT
 platforms: [linux, macos, windows]
 metadata:
   hermes:
-    tags: [ASI, AGI, recursive-self-improvement, meta-learning, self-evolution, superintelligence, unified, hermes, goal-autocomplete, finalized, production, v5, secure]
-    related_skills: [hermes-agent, deep-research, super-hermes, hermes-self-evolution, asi-master, asi-ultra, asi-ultimate, arc-agi-3-master]
-    requires_toolsets: [web, research, memory, skills, multi-agent, verification, security]
+    tags: [ASI, AGI, recursive-self-improvement, meta-learning, self-evolution, superintelligence, unified, hermes, goal-autocomplete, finalized, production, v6, secure, 35-planes]
+    related_skills: [hermes-agent, deep-research, super-hermes, hermes-self-evolution, asi-master, asi-ultra, asi-ultimate, arc-agi-3-master, hermes-asi-complete]
+    requires_toolsets: [web, research, memory, skills, multi-agent, verification, security, bot-mode, mcp]
 ---
 
-# ASI-FINALIZED v5: Production-Ready Artificial Superintelligence
+# ASI-FINALIZED v6: Production-Ready 35-Plane Cognitive Architecture
 
-This is the **production-ready, security-hardened, architecture-grade** ASI cognitive system for Hermes Agent. Version 5 addresses all findings from multi-agent review: central orchestration, typed handoffs, data contracts, failure recovery, resource governance, security guardrails, and Byzantine consensus. When loaded, the agent autonomously analyzes, plans, executes, and delivers **any goal** provided by the user.
+This is the **definitive, production-ready, security-hardened** ASI cognitive system for Hermes Agent. Version 6 unifies all 25 skills from the hermes-asi-skills repository into one coherent architecture with 35 cognitive planes organized into 5 layers. When loaded, the agent autonomously analyzes, plans, executes, and delivers **any goal** provided by the user.
 
 ## When to Use
 
@@ -22,13 +22,15 @@ Load this skill when:
 - **Any goal is provided** — the agent will autocomplete the full solution
 - Task requires autonomous multi-step reasoning across domains
 - Agent must adapt strategy based on real-time feedback
-- Recursive self-improvement is needed
+- Multi-agent Bot Mode orchestration is needed
+- Advanced security, memory, training, and evolution are required
+- Maximum autonomous operation is desired
 
 ---
 
-## Architecture: 5 Layers + Operations & Governance
+## Architecture: 5 Layers + 35 Planes
 
-### Layer 1: ORCHESTRATION
+### Layer 1: ORCHESTRATION (Planes 1-8)
 
 **Purpose:** Central coordination of all cognitive activity.
 
@@ -40,6 +42,7 @@ Load this skill when:
 - **Health Monitor** — Periodic self-diagnosis with auto-restart
 - **Circuit Breaker** — Per-layer failure detection (closed → open → half-open)
 - **Audit Logger** — All cognitive state changes logged with versioning
+- **Self-Evolution Loop** — Extract → Mutate → Evaluate → Commit
 
 **Plane Selection Logic:**
 ```
@@ -72,7 +75,7 @@ TASK ANALYSIS:
 
 ---
 
-### Layer 2: RESEARCH & ANALYSIS
+### Layer 2: RESEARCH & ANALYSIS (Planes 9-16)
 
 **Purpose:** Information gathering, reasoning, and world-modeling.
 
@@ -82,6 +85,9 @@ TASK ANALYSIS:
 - **Deep Research Protocol** — 7-phase research with quality tiers
 - **Search Optimizer** — Multi-backend with fallback chain
 - **World Model Builder** — Internal representation of problem space
+- **Metacognition Monitor** — Continuous self-monitoring with strategy selection
+- **Analysis Engine** — Data analysis and pattern recognition
+- **Exploration Engine** — Autonomous exploration and discovery
 
 **Data Contracts:**
 ```
@@ -107,7 +113,7 @@ ResearchResult {
 
 ---
 
-### Layer 3: PLANNING & STRATEGY
+### Layer 3: PLANNING & STRATEGY (Planes 17-24)
 
 **Purpose:** Goal decomposition, strategy selection, and action planning.
 
@@ -117,6 +123,9 @@ ResearchResult {
 - **Action Selector** — Context-aware with risk assessment
 - **AVO Evolutionary Search** — Population-based optimization
 - **Reflexion Engine** — Failure analysis and lesson extraction
+- **Creativity Engine** — Innovation and novel solution generation
+- **Integration Engine** — System integration and tool orchestration
+- **Communication Engine** — Natural language understanding and generation
 
 **Strategy Selection Matrix:**
 | Problem Type | Best Strategy |
@@ -138,7 +147,7 @@ ResearchResult {
 
 ---
 
-### Layer 4: EXECUTION
+### Layer 4: EXECUTION (Planes 25-30)
 
 **Purpose:** Tool use, multi-agent coordination, and benchmark evaluation.
 
@@ -148,6 +157,7 @@ ResearchResult {
 - **Memory Consolidation** — Compress → Index → Associate → Prune → Replay
 - **Benchmark Runner** — Standardized evaluation harness
 - **Specialist Roles** — Researcher, Coder, Reviewer, Verifier, Synthesizer
+- **Optimization Engine** — Performance optimization and evolutionary search
 
 **Multi-Agent Protocol:**
 1. DECOMPOSE: Break task into independent sub-tasks
@@ -161,7 +171,7 @@ ResearchResult {
 
 ---
 
-### Layer 5: VERIFICATION & EVOLUTION
+### Layer 5: VERIFICATION & EVOLUTION (Planes 31-35)
 
 **Purpose:** Result validation, self-improvement, and governed modification.
 
@@ -170,6 +180,7 @@ ResearchResult {
 - **Self-Evolution Protocol** — Extract → Mutate → Evaluate → Commit
 - **Governed Self-Modification** — Scope, verifier, evidence, versioning, authorization, rollback
 - **Skill Retirement** — Archive, deprecate, or delete unused skills
+- **Personal Singularity** — Bounded human-AI co-development
 
 **Verification Depth Selector:**
 | Criticality | Rounds | Use Case |
@@ -206,29 +217,70 @@ IF task.complexity >= 5_tool_calls:
 
 ---
 
-## Operations & Governance (Non-Cognitive)
+## Operations & Governance
 
-### Benchmark Strategy
-| Benchmark | Baseline | Target | Measurement |
-|-----------|----------|--------|-------------|
-| ARC-AGI-3 | Current score | +50% relative | Weekly evaluation |
-| SWE-bench Verified | Current Pass@1 | +50% relative | Weekly evaluation |
-| Custom evals | Task-specific | 100% pass | Per task |
+### Bot Mode Mastery (v0.21.0 Pantheon)
 
-### 24/7 Operation
-- Health checks (periodic self-diagnosis)
-- Auto-restart crashed components
-- Graceful degradation (reduced capability mode)
-- Monitoring dashboard + alerts
-- Cron integration for scheduled tasks
+**Bot Roster Management:**
+- Create bots: name, title, SOUL.md, model, skills, tools, schedule, avatar
+- Configure: clone profile, pin model, per-skill/toolset enablement
+- Lifecycle: create, edit, hide, delete
+- Presence: Active-now strip shows working bots
 
-### Personal Singularity
-Bounded human-AI co-development:
-- Continuous, user-directed process
-- Personalized network of agents
-- Helps user approach expanding feasible capability frontier
-- User-defined goals and boundaries
-- Bounded: not instantaneous, not universal, not biologically unlimited
+**Group Chat Orchestration:**
+- 2-6 bots per group
+- Up to 3 serial rounds, 10 messages per turn max
+- @mentioned bots respond, @user for escalation
+- Room settles when full round stays silent
+
+**Bot-to-Bot Communication:**
+- Format: "Message from 🤖 researcher (@researcher): [content]"
+- Each bot has persistent Bot Chat session
+- SOUL.md teaches communication protocol
+- @name pulls bots, @user escalates
+
+**Memory-Backed Cron Jobs:**
+- Standard cron expressions
+- Memory-aware scheduling
+- Per-bot routines
+- Delivery to any platform
+- Cost caps and retry
+
+**Live Subagent Steering:**
+- Monitor subagent progress in real-time
+- View live transcripts
+- Redirect mid-execution
+- Send follow-up messages
+
+### Advanced System Planes
+
+**MCP Command Center:**
+- Expanded MCP server catalog
+- Interactive picker (hermes mcp)
+- mTLS for HTTP/SSE servers
+- OAuth 2.1 support
+
+**Security Hardening:**
+- Smart approvals: independent LLM reviewer
+- Input validation and output sanitization
+- Resource quotas (max tokens, tool calls, execution time, recursive depth)
+- Sandboxing with limited tool access
+- Audit logging for all cognitive state changes
+- Emergency kill switch
+- Byzantine consensus for multi-agent orchestration
+- Memory integrity verification
+
+**Memory Mastery:**
+- Persistent memory across sessions
+- Memory graph with episodic + semantic links
+- Memory consolidation during idle time
+- Memory-aware task execution
+
+**Provider Mastery:**
+- Multi-provider fallback chain
+- Cost optimization per provider
+- Rate limit handling
+- Provider-specific capabilities
 
 ---
 
