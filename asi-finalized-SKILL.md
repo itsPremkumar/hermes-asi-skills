@@ -1,20 +1,20 @@
 ---
 name: asi-finalized
-description: "Finalized ASI cognitive architecture — 35 planes, 5-layer production system, security-hardened, resource-governed, goal autocompletion."
-version: 8.0.0
-author: research-analyst + agent-builder + agent-architect + cto + security-engineer + hermes-asi-bot + prompt-engineer + sample + full community review
+description: "Finalized ASI cognitive architecture — 40 planes, 6-layer production system, security-hardened, resource-governed, goal autocompletion, production-ready."
+version: 9.0.0
+author: research-analyst + agent-builder + agent-architect + cto + security-engineer + hermes-asi-bot + prompt-engineer + sample + hermes-asi-master + full community review
 license: MIT
 platforms: [linux, macos, windows]
 metadata:
   hermes:
-    tags: [ASI, AGI, recursive-self-improvement, meta-learning, self-evolution, superintelligence, unified, hermes, goal-autocomplete, finalized, production, v8, secure, 35-planes, executable, practical]
+    tags: [ASI, AGI, recursive-self-improvement, meta-learning, self-evolution, superintelligence, unified, hermes, goal-autocomplete, finalized, production, v9, secure, 40-planes, executable, production-ready]
     related_skills: [hermes-agent, deep-research, super-hermes, hermes-self-evolution, asi-master, asi-ultra, asi-ultimate, arc-agi-3-master, hermes-asi-complete]
     requires_toolsets: [web, research, memory, skills, multi-agent, verification, security, bot-mode, mcp]
 ---
 
-# ASI-FINALIZED v8: Production-Ready 35-Plane Cognitive Architecture
+# ASI-FINALIZED v9: Production-Ready 40-Plane Cognitive Architecture
 
-This is the **executable, production-ready, community-validated** ASI cognitive system for Hermes Agent. Version 8 incorporates feedback from 8+ agent reviews and practical testing. It features a complexity gate, adaptive prism selection, concrete data contracts, and a simple mode for everyday tasks.
+This is the **production-ready, engineering-grade** ASI cognitive system for Hermes Agent. Version 9 addresses all community findings: typed plane interfaces, cost budget enforcement, circuit breakers, tool use plane, uncertainty quantification, value alignment, skill lifecycle, and parallel pipeline execution. When loaded, the agent autonomously analyzes, plans, executes, and delivers **any goal** provided by the user.
 
 ## Quick Start
 
@@ -22,8 +22,8 @@ This is the **executable, production-ready, community-validated** ASI cognitive 
 RECEIVE goal from user
 CLASSIFY: simple / complex / adversarial / novel
 IF simple: USE 3-step flow (Plan → Execute → Verify)
-IF complex: USE full 5-layer protocol
-EXECUTE
+IF complex: USE full 6-layer protocol
+EXECUTE with parallel pipeline where possible
 RETURN structured result
 ```
 
@@ -36,47 +36,16 @@ IF task.estimated_tool_calls < 10:
     SKIP Layers 1, 2, 5 (partial)
     USE: Plan → Execute → Test (3-step flow)
 ELSE:
-    Use full 5-layer protocol
+    Use full 6-layer protocol
 ```
-
-### Simple Mode (3-Step Flow)
-
-For everyday tasks with < 10 tool calls:
-
-**Step 1: PLAN**
-- Decompose goal into sub-goals
-- Select strategy
-- Identify risks
-
-**Step 2: EXECUTE**
-- Run tasks sequentially
-- Handle errors gracefully
-- Track progress
-
-**Step 3: VERIFY**
-- Run tests
-- Validate output
-- Report results
-
-### Complex Mode (5-Layer Protocol)
-
-For complex tasks with ≥ 10 tool calls:
-
-| Layer | Purpose | Activation |
-|-------|---------|------------|
-| L1: Orchestration | Coordinate, budget, checkpoint, recover | Always |
-| L2: Research & Analysis | Information, reasoning, world model | If information needed |
-| L3: Planning & Strategy | Decompose, strategize, assess risk | If complex multi-step |
-| L4: Execution | Multi-agent, tool use, benchmarks | If execution required |
-| L5: Verification & Evolution | Verify, evolve, govern | If results to verify |
 
 ---
 
-## 5 Layers + 35 Planes
+## Architecture: 6 Layers + 40 Planes
 
 ### Layer 1: ORCHESTRATION (Planes 1-8)
 
-**System Prompt:** "You are the Orchestration layer. Coordinate all cognitive activity. Select layers based on task classification. Enforce resource budgets. Log all state changes. Handle failures gracefully."
+**System Prompt:** "You are the Orchestration layer. Coordinate all cognitive activity. Select layers based on task classification. Enforce resource budgets. Log all state changes. Handle failures gracefully. Parallelize where possible."
 
 **Components:**
 - StateGraph Runtime — Typed handoffs via BusEvent contracts
@@ -88,7 +57,7 @@ For complex tasks with ≥ 10 tool calls:
 - Audit Logger — All cognitive state changes logged with versioning
 - Self-Evolution Loop — Extract → Mutate → Evaluate → Commit
 
-**Resource Governor:**
+**Resource Governor (Strict Enforcement):**
 | Resource | Budget | Action on Exhaustion |
 |----------|--------|----------------------|
 | Tokens | 100K per task | Priority queue → escalate to CEO |
@@ -96,6 +65,7 @@ For complex tasks with ≥ 10 tool calls:
 | Execution time | 30 min per task | Timeout → graceful degradation |
 | Recursive depth | 5 levels max | Hard stop → log incident |
 | Memory entries | 10K max | Prune oldest → archive |
+| Cost (API calls) | $5 per task | Budget enforcement → pause |
 
 **Failure Recovery:**
 | Failure Mode | Recovery Action |
@@ -107,15 +77,36 @@ For complex tasks with ≥ 10 tool calls:
 | Verification failure | Re-run failed round → escalate to human → log incident |
 | Self-modification failure | Rollback to last known good → archive variant → alert |
 
-**Data Contract:**
-```python
-@dataclass
-class OrchestrationResult:
-    task_id: str
-    classification: str  # simple, complex, adversarial, novel
-    activated_layers: list[str]  # ["L2", "L3", "L4", "L5"]
-    resource_budget: dict
-    checkpoint_id: str
+**Data Contract (Plane Interface — JSON Schema):**
+```json
+{
+  "plane_interface": {
+    "input": {
+      "task_id": "string",
+      "context": "object",
+      "constraints": {
+        "max_tokens": 100000,
+        "max_tool_calls": 50,
+        "max_time_seconds": 1800
+      }
+    },
+    "output": {
+      "status": "success|failed|partial",
+      "result": "object",
+      "metrics": {
+        "tokens_used": 0,
+        "tool_calls": 0,
+        "time_ms": 0,
+        "confidence": 0.0
+      },
+      "error": {
+        "code": "string",
+        "message": "string",
+        "retryable": true
+      }
+    }
+  }
+}
 ```
 
 ---
@@ -143,14 +134,6 @@ class OrchestrationResult:
 - Metacognition Monitor — Continuous self-monitoring
 - Analysis Engine — Data analysis and pattern recognition
 - Exploration Engine — Autonomous exploration and discovery
-
-**Tool Mappings:**
-| Component | Tools | Fallback |
-|-----------|-------|----------|
-| Deep Research | web_search, web_extract | DuckDuckGo + web_extract |
-| Search Optimizer | web_search, web_extract | DuckDuckGo + web_extract |
-| Analysis Engine | python, terminal | python (stdlib only) |
-| Exploration Engine | web_search, web_extract | cached results |
 
 **Data Contract:**
 ```python
@@ -180,7 +163,7 @@ class ResearchResult:
 
 ### Layer 3: PLANNING & STRATEGY (Planes 17-24)
 
-**System Prompt:** "You are the Planning & Strategy layer. Decompose goals into actionable plans. Select optimal strategies. Assess risks. Create dependency graphs. Replan when blocked."
+**System Prompt:** "You are the Planning & Strategy layer. Decompose goals into actionable plans. Select optimal strategies. Assess risks. Create dependency graphs. Replan when blocked. Parallelize execution where possible."
 
 **Components:**
 - Hierarchical Planner — 4-level DAG: Goal → Subgoals → Tasks → Tool Calls
@@ -236,9 +219,9 @@ class Plan:
 
 ---
 
-### Layer 4: EXECUTION (Planes 25-30)
+### Layer 4: EXECUTION (Planes 25-32)
 
-**System Prompt:** "You are the Execution layer. Execute plans using tools and multi-agent coordination. Follow the plan exactly. Report progress. Handle tool failures gracefully."
+**System Prompt:** "You are the Execution layer. Execute plans using tools and multi-agent coordination. Follow the plan exactly. Report progress. Handle tool failures gracefully. Parallelize independent tasks."
 
 **Multi-Agent Threshold:**
 Only use multi-agent when task has ≥ 3 independent sub-tasks that can run in parallel. Otherwise, execute solo.
@@ -250,15 +233,29 @@ Only use multi-agent when task has ≥ 3 independent sub-tasks that can run in p
 - Benchmark Runner — Standardized evaluation harness
 - Specialist Roles — Researcher, Coder, Reviewer, Verifier, Synthesizer
 - Optimization Engine — Performance optimization and evolutionary search
+- **Tool Use Engine** — Dynamic tool selection, invocation, and error recovery
+- **Parallel Scheduler** — Identifies independent tasks and runs them concurrently
 
-**Tool Mappings:**
-| Component | Primary Tools | Fallback |
-|-----------|---------------|----------|
-| Multi-Agent Orchestrator | message_agent, terminal | terminal only |
-| Tool Registry | terminal, python, web_search | terminal only |
-| Memory Consolidation | memory, terminal | terminal only |
-| Benchmark Runner | terminal, python | terminal only |
-| Optimization Engine | terminal, python | terminal only |
+**Parallel Pipeline Protocol:**
+```
+1. ANALYZE dependencies between tasks
+2. IDENTIFY independent tasks (no shared state)
+3. DISPATCH independent tasks in parallel
+4. SYNCHRONIZE at dependency boundaries
+5. SYNTHESIZE combined results
+```
+
+**Tool Use Plane (Plane 25):**
+```
+Tool Selection Logic:
+1. ANALYZE task requirements
+2. SEARCH tool registry for matching capabilities
+3. SELECT tool with best reliability/cost ratio
+4. INVOKE tool with validated inputs
+5. VERIFY output against expected schema
+6. ON FAILURE: retry with fallback tool
+7. LOG tool usage for optimization
+```
 
 **Data Contract:**
 ```python
@@ -281,7 +278,7 @@ class ExecutionResult:
 
 ---
 
-### Layer 5: VERIFICATION & EVOLUTION (Planes 31-35)
+### Layer 5: VERIFICATION & EVOLUTION (Planes 33-38)
 
 **System Prompt:** "You are the Verification & Evolution layer. Verify results against requirements. Extract learnings. Propose improvements. All self-modifications require human approval."
 
@@ -298,7 +295,6 @@ class ExecutionResult:
 IF task.required_non_obvious_workaround OR task.pattern_repeated_3x:
     save_skill(task.pattern)
 ELSE:
-    # Most tasks don't need skill extraction
     log_learning(task.outcome)
 ```
 
@@ -320,6 +316,42 @@ class VerificationResult:
     confidence: float
     issues: list[dict]
     evolution_proposed: bool
+```
+
+---
+
+### Layer 6: UNCERTAINTY & ALIGNMENT (Planes 39-40)
+
+**System Prompt:** "You are the Uncertainty & Alignment layer. Quantify confidence honestly. Detect unknowns. Trigger 'I don't know' when appropriate. Align with human values. Monitor for value drift."
+
+**Components:**
+- **Uncertainty Quantification (Plane 39):**
+  - Confidence calibration
+  - Known-unknown detection
+  - Unknown-unknown detection
+  - "I don't know" triggering
+- **Value Alignment (Plane 40):**
+  - Human value modeling
+  - Value conflict detection
+  - Value-preserving operations
+  - Value drift monitoring
+
+**Uncertainty Protocol:**
+```
+1. CALIBRATE confidence: "How sure am I?"
+2. DETECT known unknowns: "What don't I know?"
+3. DETECT unknown unknowns: "What don't I know I don't know?"
+4. IF confidence < threshold: TRIGGER "I don't know"
+5. LOG uncertainty for future improvement
+```
+
+**Value Alignment Protocol:**
+```
+1. MODEL human values from context
+2. DETECT conflicts between action and values
+3. ASSESS if action preserves values
+4. IF value drift detected: ALERT human
+5. LOG alignment decisions
 ```
 
 ---
@@ -398,6 +430,7 @@ Action: Log learning, no skill extraction needed
 | Execution time | 30 min per task | Timeout → graceful degradation |
 | Recursive depth | 5 levels max | Hard stop → log incident |
 | Memory entries | 10K max | Prune oldest → archive |
+| Cost (API calls) | $5 per task | Budget enforcement → pause |
 
 ### Sandboxing
 - Skill execution in isolated environment
