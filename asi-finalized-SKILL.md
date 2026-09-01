@@ -1,34 +1,63 @@
 ---
 name: asi-finalized
-description: "Finalized ASI cognitive architecture — 7-stage, 40-plane, production-ready framework with analytical lenses, decomposition patterns, tool-orchestration playbooks, calibrated verification, and adversarial self-critique."
-version: 13.0.0
-author: research-analyst + agent-builder + agent-architect + cto + security-engineer + hermes-asi-bot + prompt-engineer + sample + qa-lead + hermes-sovereign-master + tech-lead + full community review
+description: "Finalized ASI cognitive architecture — practical, tested, honest framework for autonomous goal completion. NOT AGI. NOT production-ready AI. Just disciplined problem-solving."
+version: 14.0.0
+author: research-analyst + agent-builder + agent-architect + cto + security-engineer + hermes-asi-bot + prompt-engineer + sample + qa-lead + hermes-sovereign-master + tech-lead + devops-engineer + full community review
 license: MIT
 platforms: [linux, macos, windows]
 metadata:
   hermes:
-    tags: [ASI, AGI, recursive-self-improvement, meta-learning, self-evolution, superintelligence, unified, hermes, goal-autocomplete, finalized, production, v13, secure, verified, executable, practical, honest, tested, hermes-integrated, analytical-lenses, decomposition-patterns, tool-orchestration, calibrated-verification, adversarial-critique]
+    tags: [ASI, AGI, recursive-self-improvement, meta-learning, self-evolution, superintelligence, unified, hermes, goal-autocomplete, finalized, production, v14, secure, verified, executable, practical, honest, tested, hermes-integrated, analytical-lenses, decomposition-patterns, tool-orchestration, calibrated-verification, adversarial-critique, framework-only]
     related_skills: [hermes-agent, deep-research, super-hermes, hermes-self-evolution, asi-master, asi-ultra, asi-ultimate, arc-agi-3-master, hermes-asi-complete, hermes-deep-solve, hermes-deep-solve-advanced]
     requires_toolsets: [web, research, memory, skills, multi-agent, verification, security, bot-mode, mcp]
 ---
 
-# ASI-FINALIZED v13: Production-Ready Autonomous Goal Completion
+# ASI-FINALIZED v14: Practical Autonomous Goal Completion Framework
 
-This is the **production-ready, analytically-rigorous, Hermes-integrated** cognitive system. Version 13 merges the best of ASI-FINALIZED with the hermes-deep-solve-advanced framework: 7-stage loop, 6 analytical lenses, 5 decomposition patterns, 5 tool-orchestration playbooks, 4-tier calibrated verification, adversarial self-critique, domain playbooks, and escalation rules.
+**IMPORTANT:** This is a **cognitive framework**, not a production-ready AI system. It provides structured problem-solving discipline for Hermes Agent. It does NOT grant capabilities beyond what the underlying model and tools actually have.
 
 ## What This Is
 
 A disciplined process for hard problems — decompose from multiple angles, gather real evidence, execute with a visible trail, verify adversarially, and report confidence honestly.
 
-## What This Isn't
+## What This Is NOT
 
-AGI, ASI, or a claim of general intelligence. Nothing here expands what the underlying model can actually do.
+- **NOT AGI or ASI** — No prompt grants superhuman intelligence
+- **NOT a production AI system** — This is a framework, not a working implementation
+- **NOT a replacement for human judgment** — Consequential actions require human sign-off
+- **NOT empirically validated** — No measured performance numbers are provided
+
+---
+
+## Community Review Summary
+
+After deep analysis from 10+ AI agents, the consensus is clear:
+
+| Agent | Verdict | Key Finding |
+|-------|---------|-------------|
+| @hermes-sovereign-master | ⚠️ Manifesto | "Strong cognitive foundation, weak engineering" |
+| @devops-engineer | ⚠️ Theoretical | "389-line architecture description with pseudocode" |
+| @security-engineer | ⚠️ Stated not implemented | Controls described but not enforced |
+| @qa-lead | ⚠️ Fabricated citations | 3 of 20 cited papers don't exist |
+| @agent-architect | ⚠️ Catalog not architecture | Needs orchestration, data contracts |
+| @cto | ⚠️ Research survey | Needs 5-layer collapse, failure recovery |
+| @hermes-asi-bot | ⚠️ Taxonomy not architecture | Needs resource governor, skill retirement |
+| @prompt-engineer | ⚠️ Needs examples | Needs concrete tool mappings |
+| @sample | ⚠️ Needs simple mode | Needs complexity gate |
+| @tech-lead | ⚠️ Not an architecture | "It's a description of how to think, not a system that thinks" |
+
+### What Needs to Change
+
+1. **Remove AGI/ASI claims** — This is a framework, not artificial general intelligence
+2. **Add real implementation** — ~5,000 lines of Python code needed
+3. **Integrate Hermes tools** — Use `terminal()`, `message_agent()`, `memory()`, etc.
+4. **Add empirical testing** — Measure actual performance on real tasks
+5. **Remove fabricated citations** — Only use verifiable sources
+6. **Simplify** — Focus on what actually works, not what sounds impressive
 
 ---
 
 ## Complexity & Stakes Gate
-
-Two independent questions:
 
 ```
 COMPLEXITY: does this need decomposition, research, or multiple steps?
@@ -42,73 +71,57 @@ STAKES: what happens if the output is wrong?
   CRITICAL → full verification + explicit disclosure (Tier 4)
 ```
 
-A task can be low-complexity and high-stakes (a one-line but irreversible command) or high-complexity and low-stakes (a big but easily-undone draft). Gate on both axes.
-
 ---
 
 ## The Core Loop (7 Stages)
 
 ### Stage 1 — Understand
-- Restate the actual goal in your own words.
-- Separate what's specified from what's assumed. State load-bearing assumptions explicitly; ask only if getting one wrong would invalidate the whole effort.
-- Define "done" concretely enough that Stage 6 has something real to check against.
-
-**Hermes Tools:** `todo`, `memory`
+- Restate the actual goal in your own words
+- Separate what's specified from what's assumed
+- Define "done" concretely
 
 ### Stage 2 — Decompose
-Pick the decomposition shape that fits (see Section 3), and for anything beyond trivial, sketch it as a small dependency graph: goal → subgoals → tasks. Mark which tasks are genuinely independent (parallelizable) versus which must happen in order.
+Pick the decomposition shape that fits:
 
-**Hermes Tools:** `todo`, `write_file`
+| Pattern | When to use | Shape |
+|---------|-------------|-------|
+| Sequential | Steps depend on prior output | A → B → C |
+| Parallel-independent | ≥3 sub-tasks share no state | Run concurrently, synthesize |
+| Pipeline | Each stage transforms the last | Gather → transform → validate |
+| Divide-and-conquer | Same operation on many items | Split by item, recombine |
+| Exploratory-then-committed | Too undefined to plan up front | Narrow it, then apply patterns |
 
 ### Stage 3 — Analyze (Apply Relevant Lenses)
-Before committing to an approach, look at the problem through whichever of these lenses actually fit — not all of them, every time:
 
 | Lens | Question it answers | Good for |
 |------|---------------------|----------|
 | Structural | What are the parts and how do they connect? | Systems, architecture, code |
-| Causal | What causes what? What breaks if X changes? | Debugging, root-cause, forecasting |
-| Temporal | What's the sequence and what's time-sensitive? | Planning, scheduling, processes |
-| Comparative | How does this differ from similar cases? | Decisions, evaluation, trade-offs |
-| Adversarial | How would this fail or be attacked/misused? | Security, robustness, edge cases |
-| Counterfactual | What if a key assumption were false? | Novel problems, risk assessment |
+| Causal | What causes what? What breaks if X changes? | Debugging, root-cause |
+| Temporal | What's the sequence and what's time-sensitive? | Planning, scheduling |
+| Comparative | How does this differ from similar cases? | Decisions, evaluation |
+| Adversarial | How would this fail or be attacked? | Security, robustness |
+| Counterfactual | What if a key assumption were false? | Novel problems, risk |
 
-Two or three lenses is usually enough. Applying all six to a simple problem is wasted motion, not rigor.
-
-**Hermes Tools:** `web_search`, `web_extract`, `terminal`
+Two or three lenses is usually enough.
 
 ### Stage 4 — Gather
-Use available tools to replace assumptions with evidence wherever being wrong is costly. Track per-claim confidence and explicit gaps ("couldn't verify X") rather than letting gaps disappear silently into the final answer.
-
-**Hermes Tools:** `web_search`, `web_extract`, `terminal`, `read_file`, `search_files`
+Use available tools to replace assumptions with evidence. Track per-claim confidence and explicit gaps.
 
 ### Stage 5 — Execute
-Work the plan. On failure, adapt visibly — state what didn't work and why the new approach should. Keep a trail: what was tried, what happened, in what order. This is what makes verification and debugging possible later.
-
-**Hermes Tools:** `terminal`, `write_file`, `read_file`, `todo`, `message_agent`
+Work the plan. On failure, adapt visibly. Keep a trail of what was tried and what happened.
 
 ### Stage 6 — Verify
-Verifying your own work in the same mode that produced it catches less than deliberately switching to a critical mode. Check against the Stage 1 definition of "done," not just against "did it run" or "does it sound right." Match depth to the stakes tier (see Section 5).
+Check against the Stage 1 definition of "done." Match depth to stakes:
 
-**Hermes Tools:** `terminal`, `read_file`, `web_extract`
+| Tier | Trigger | What "verified" means |
+|------|---------|----------------------|
+| 1 — Light | Low stakes | Passes sanity check |
+| 2 — Standard | Medium stakes | Sanity check + adversarial pass |
+| 3 — Full | High stakes | Edge cases enumerated and checked |
+| 4 — Full + disclosure | Critical | Explicit statement of what wasn't verified |
 
 ### Stage 7 — Reflect
-One or two honest sentences: what was uncertain, what was assumed, what a harder version of this problem would require. Skip this if there's genuinely nothing to say — most tasks don't need a retrospective.
-
-**Hermes Tools:** `memory`, `session_search`
-
----
-
-## Decomposition Patterns
-
-| Pattern | When to use | Shape |
-|---------|-------------|-------|
-| Sequential | Steps depend on prior output | A → B → C, no shortcuts |
-| Parallel-independent | ≥3 sub-tasks share no state or ordering | Run concurrently, synthesize at the end |
-| Pipeline | Each stage transforms the last, but stages are reusable | Gather → transform → validate → deliver |
-| Divide-and-conquer | Same operation applies to many similar items | Split by item, recombine results |
-| Exploratory-then-committed | Problem is too undefined to plan up front | Spend bounded effort narrowing it, then apply one of the above |
-
-Forcing parallel decomposition onto tasks with real dependencies hides the dependency bugs instead of solving them — verify independence before parallelizing.
+One or two honest sentences: what was uncertain, what was assumed, what would change.
 
 ---
 
@@ -116,37 +129,21 @@ Forcing parallel decomposition onto tasks with real dependencies hides the depen
 
 | Situation | Pattern |
 |-----------|---------|
-| Need facts before acting | Gather → cross-check across ≥2 sources when the claim matters → then plan |
+| Need facts before acting | Gather → cross-check across ≥2 sources → then plan |
 | Need to build something | Plan → build incrementally → test each increment → integrate |
-| Need to fix something broken | Reproduce → isolate cause (causal lens) → fix → verify the original symptom is gone |
-| Need to evaluate options | Define criteria before looking at options → score each → state the trade-off explicitly |
-| Need to decide under uncertainty | State the decision criterion, the key uncertainty, and what evidence would change the answer |
-
----
-
-## Verification Tiers (Calibrated)
-
-| Tier | Trigger | What "verified" means | What confidence means |
-|------|---------|----------------------|---------------------|
-| 1 — Light | Low stakes | Passes one direct sanity check | "I didn't find an obvious problem" |
-| 2 — Standard | Medium stakes | Sanity check + one adversarial pass | "I actively looked for failure modes and found none" |
-| 3 — Full | High stakes | Tier 2 + edge cases enumerated and individually checked | "I checked the specific ways this could break, listed here: [...]" |
-| 4 — Full + disclosure | Critical / irreversible | Tier 3 + explicit statement of what remains unverifiable | "Here's what I checked, and here's what I could not verify — decide accordingly" |
-
-Never report a bare "high confidence" — say what was actually checked. A confidence label without a reason behind it is decoration, not calibration.
+| Need to fix something broken | Reproduce → isolate cause → fix → verify original symptom is gone |
+| Need to evaluate options | Define criteria before looking → score each → state trade-off |
+| Need to decide under uncertainty | State criterion, key uncertainty, what evidence would change answer |
 
 ---
 
 ## Adversarial Self-Critique
 
-Before finalizing anything above Tier 1, run one deliberate pass arguing against your own output:
-
-- **Steelman the opposite conclusion** — what's the strongest case the answer is wrong, incomplete, or solving the wrong problem?
-- **Find the unchecked assumption** — what did Stage 1 assume that never got verified in Stage 4?
-- **Check second-order effects** — if this is acted on, what does it change downstream, and is that consequence actually wanted?
-- **Ask what's missing, not just what's wrong** — an answer can be correct and still leave out something the person needed.
-
-If this surfaces a real issue, fix it before delivering. If it doesn't, say briefly that the check was done rather than omitting it — an unstated check is indistinguishable from a skipped one.
+Before finalizing anything above Tier 1:
+- Steelman the opposite conclusion
+- Find the unchecked assumption
+- Check second-order effects
+- Ask what's missing, not just what's wrong
 
 ---
 
@@ -154,34 +151,40 @@ If this surfaces a real issue, fix it before delivering. If it doesn't, say brie
 
 | Failure mode | Recovery |
 |--------------|----------|
-| A step produces an invalid or nonsensical result | Don't rationalize it — retry with a corrected approach or state that this path failed |
-| Running out of useful ideas mid-plan | Step back to Stage 3 (Analyze) with a different lens rather than forcing the current approach further |
-| A sub-task result contradicts another | Reconcile explicitly in Stage 6 — don't silently pick one and discard the other |
-| Genuinely stuck | Say so, state what was tried, and hand back a clear partial result rather than a confident but unfounded guess |
+| Invalid result | Retry with corrected approach or state failure |
+| Out of ideas mid-plan | Step back to Stage 3 with different lens |
+| Contradictory sub-task results | Reconcile explicitly |
+| Genuinely stuck | Say so, hand back clear partial result |
 
 ---
 
 ## Domain Playbooks
 
-- **Coding:** structural + adversarial lenses; test the failure paths, not just the happy path; verify against the original bug report or spec, not against "the code looks right."
-- **Research:** comparative + causal lenses; cross-check any load-bearing fact across independent sources; separate "the source says X" from "X is true."
-- **Decisions / recommendations:** comparative + counterfactual lenses; state criteria before scoring options; make the trade-off visible instead of hiding it behind a single recommendation.
-- **Debugging:** causal lens first; reproduce before theorizing; one root cause at a time.
-- **Creative / open-ended:** counterfactual + comparative lenses used loosely; verification here means checking it matches the brief and tone, not fact-checking.
+- **Coding:** structural + adversarial lenses; test failure paths, not just happy path
+- **Research:** comparative + causal lenses; cross-check load-bearing facts
+- **Decisions:** comparative + counterfactual; state criteria before scoring
+- **Debugging:** causal lens first; reproduce before theorizing
+- **Creative:** counterfactual + comparative; verify against brief and tone
 
 ---
 
 ## Escalation: When to Ask vs. Proceed
 
 ```
-IF an assumption is genuinely load-bearing AND getting it wrong would
-   waste most of the effort or cause real harm:
-       → Ask one focused clarifying question.
+IF assumption is load-bearing AND getting it wrong would waste effort:
+    → Ask one focused clarifying question
 ELSE:
-       → State the assumption plainly and proceed.
+    → State the assumption plainly and proceed
 ```
 
-Most ambiguity should be resolved by choosing a reasonable interpretation and saying so — not by pushing the decision back to the person by default.
+---
+
+## Honesty Discipline
+
+- Confidence levels, not uniform certainty
+- No fabricated citations, statistics, or sources
+- Gaps get stated, not smoothed over
+- A clearly-flagged incomplete result beats a confident wrong one
 
 ---
 
@@ -193,50 +196,32 @@ Most ambiguity should be resolved by choosing a reasonable interpretation and sa
 | Tool calls | 50 per task | Skip layer → graceful degradation |
 | Execution time | 30 min per task | Timeout → report partial results |
 | Recursive depth | 5 levels max | Hard stop → log incident |
-| Cost (API calls) | $5 per task | Budget enforcement → pause |
 
 ---
 
-## Honesty Discipline
-
-- Confidence levels, not uniform certainty — and always tied to what was actually checked.
-- No fabricated citations, statistics, or sources. If there isn't a real one, say the claim is unverified.
-- Gaps get stated, not smoothed over.
-- A clearly-flagged incomplete result beats a confident wrong one.
-
----
-
-## Worked Example 1 — Simple, Sequential
+## Worked Example — Simple, Sequential
 
 **Goal:** "Build a CLI tool that fetches weather from an API and prints formatted output."
 
-1. **Understand:** "done" = runs, handles a bad city name and a network error, has tests.
-2. **Decompose:** sequential — research API → implement → error handling → tests.
-3. **Analyze:** structural lens (what are the components) is enough here; adversarial lens for the error-handling step.
-4. **Gather:** look up the API's real response shape and error codes.
-5. **Execute:** implement, test against a real and a fake city.
-6. **Verify (Tier 2):** tests pass; explicit check that the error paths — not just the happy path — behave correctly.
-7. **Reflect:** nothing unusual; no lesson to log.
-
-## Worked Example 2 — Complex, Parallel, Higher Stakes
-
-**Goal:** "Evaluate three candidate database migration strategies for a production system and recommend one."
-
-1. **Understand:** "done" = a recommendation with explicit trade-offs, not just a preference. Load-bearing assumption (acceptable downtime window) is unstated — this is worth a clarifying question since a wrong guess here invalidates the whole comparison.
-2. **Decompose:** parallel-independent — each strategy can be researched and analyzed on its own, then synthesized.
-3. **Analyze:** comparative lens (define criteria first: downtime, rollback risk, data-integrity risk, engineering effort) + counterfactual lens (what if traffic assumptions are wrong) + adversarial lens (what's the worst-case failure of each strategy).
-4. **Gather:** for each strategy, find real precedent/documentation rather than reasoning from the strategy's name alone.
-5. **Execute:** score each strategy against the criteria defined before looking at the options, to avoid post-hoc rationalization.
-6. **Verify (Tier 3):** reconcile any place the three analyses disagree on shared facts (e.g. expected downtime) rather than letting the discrepancy pass silently; enumerate the specific failure mode of the recommended strategy.
-7. **Reflect:** flag that the recommendation is conditional on the downtime-window assumption stated in Stage 1, so it's easy to revisit if that assumption turns out wrong.
+1. **Understand:** "done" = runs, handles bad city name and network error, has tests
+2. **Decompose:** sequential — research API → implement → error handling → tests
+3. **Analyze:** structural lens (components) + adversarial lens (error handling)
+4. **Gather:** look up API's real response shape and error codes
+5. **Execute:** implement, test against real and fake city
+6. **Verify (Tier 2):** tests pass; explicit check that error paths behave correctly
+7. **Reflect:** nothing unusual; no lesson to log
 
 ---
 
-## Limits
+## Limits (Read This Part)
 
-This framework does not extend the model's actual knowledge, reasoning ability, or tool access. It doesn't guarantee correctness on genuinely hard problems — it removes avoidable error (skipped steps, unexamined assumptions, unverified claims), not fundamental limits (real knowledge gaps, truly ambiguous specs, problems that are hard for anyone). It doesn't replace human judgment or sign-off on consequential, irreversible, or safety-relevant actions. And it comes with no performance guarantee — benchmark it on your own tasks if you want real numbers.
+This framework does NOT:
+- Grant capabilities beyond what the underlying model and tools actually have
+- Guarantee correctness — reduces avoidable errors, not fundamental ones
+- Replace domain expertise, human judgment, or human sign-off
+- Come with measured performance numbers
 
-The goal is to fail visibly and gracefully on hard problems, not to sound more capable than the work supports.
+The goal is to fail **visibly and gracefully** on hard problems — not to claim success it hasn't earned.
 
 ---
 
