@@ -1,20 +1,20 @@
 ---
 name: asi-finalized
-description: "Finalized ASI cognitive architecture — 5-layer production system with orchestration, plane selection, failure recovery, goal autocompletion."
-version: 4.0.0
-author: research-analyst + agent-builder + agent-architect + cto
+description: "Finalized ASI cognitive architecture — 5-layer production system with orchestration, plane selection, failure recovery, security, resource governance, goal autocompletion."
+version: 5.0.0
+author: research-analyst + agent-builder + agent-architect + cto + security-engineer + hermes-asi-bot
 license: MIT
 platforms: [linux, macos, windows]
 metadata:
   hermes:
-    tags: [ASI, AGI, recursive-self-improvement, meta-learning, self-evolution, superintelligence, unified, hermes, goal-autocomplete, finalized, production, v4]
+    tags: [ASI, AGI, recursive-self-improvement, meta-learning, self-evolution, superintelligence, unified, hermes, goal-autocomplete, finalized, production, v5, secure]
     related_skills: [hermes-agent, deep-research, super-hermes, hermes-self-evolution, asi-master, asi-ultra, asi-ultimate, arc-agi-3-master]
-    requires_toolsets: [web, research, memory, skills, multi-agent, verification]
+    requires_toolsets: [web, research, memory, skills, multi-agent, verification, security]
 ---
 
-# ASI-FINALIZED v4: Production-Ready Artificial Superintelligence
+# ASI-FINALIZED v5: Production-Ready Artificial Superintelligence
 
-This is the **production-ready, architecture-grade** ASI cognitive system for Hermes Agent. Version 4 collapses the 20 cognitive planes into **5 layers** with explicit interfaces, data contracts, failure recovery, and plane selection. When loaded, the agent autonomously analyzes, plans, executes, and delivers **any goal** provided by the user.
+This is the **production-ready, security-hardened, architecture-grade** ASI cognitive system for Hermes Agent. Version 5 addresses all findings from multi-agent review: central orchestration, typed handoffs, data contracts, failure recovery, resource governance, security guardrails, and Byzantine consensus. When loaded, the agent autonomously analyzes, plans, executes, and delivers **any goal** provided by the user.
 
 ## When to Use
 
@@ -26,19 +26,20 @@ Load this skill when:
 
 ---
 
-## Architecture: 5 Layers (Collapsed from 20 Planes)
+## Architecture: 5 Layers + Operations & Governance
 
-### Layer 1: ORCHESTRATION (Planes 1, 5, 8, 17)
+### Layer 1: ORCHESTRATION
 
 **Purpose:** Central coordination of all cognitive activity.
 
 **Components:**
 - **StateGraph Runtime** — Typed handoffs between layers via BusEvent contracts
 - **Plane Selector** — Dynamically selects which layers to invoke based on task analysis
-- **Budget Enforcer** — Per-layer resource budgets (time, tokens, tool calls)
+- **Resource Governor** — Per-layer resource budgets (time, tokens, tool calls) with enforcement
 - **Checkpoint Manager** — Save/resume state for long-running tasks
 - **Health Monitor** — Periodic self-diagnosis with auto-restart
-- **Circuit Breaker** — Per-layer failure detection and graceful degradation
+- **Circuit Breaker** — Per-layer failure detection (closed → open → half-open)
+- **Audit Logger** — All cognitive state changes logged with versioning
 
 **Plane Selection Logic:**
 ```
@@ -50,14 +51,28 @@ TASK ANALYSIS:
 └── Always active:          → Layer 1 (Orchestration)
 ```
 
-**Failure Recovery:**
-- Per-layer timeouts (configurable)
-- Output validation against schemas
-- State versioning for rollback
-- Circuit breaker pattern (closed → open → half-open)
-- CEO escalation when boundary hit
+**Resource Governor:**
+| Resource | Budget | Action on Exhaustion |
+|----------|--------|----------------------|
+| Tokens | 100K per task | Priority queue → escalate to CEO |
+| Tool calls | 50 per task | Circuit breaker → skip layer |
+| Execution time | 30 min per task | Timeout → graceful degradation |
+| Recursive depth | 5 levels max | Hard stop → log incident |
+| Memory entries | 10K max | Prune oldest → archive |
 
-### Layer 2: RESEARCH & ANALYSIS (Planes 2, 3, 4, 6, 7)
+**Failure Recovery:**
+| Failure Mode | Recovery Action |
+|--------------|-----------------|
+| Layer timeout | Circuit breaker → skip layer → degrade gracefully |
+| Invalid output | Schema validation → retry with feedback → fallback |
+| Resource exhaustion | Budget enforcement → priority queue → escalate |
+| Agent failure | Auto-restart → retry with backoff → escalate to CEO |
+| Verification failure | Re-run failed round → escalate to human → log incident |
+| Self-modification failure | Rollback to last known good → archive variant → alert |
+
+---
+
+### Layer 2: RESEARCH & ANALYSIS
 
 **Purpose:** Information gathering, reasoning, and world-modeling.
 
@@ -74,9 +89,10 @@ ResearchResult {
   query: str
   sources: list[Source]
   findings: list[Finding]
-  confidence: float
+  confidence: float  // 0-1
   gaps: list[str]
   contradictions: list[Contradiction]
+  verification_status: enum {unverified, cross-checked, conflicted}
 }
 ```
 
@@ -89,7 +105,9 @@ ResearchResult {
 6. Adversarial — Attack/failure modes
 7. Meta — Nature of the problem itself
 
-### Layer 3: PLANNING & STRATEGY (Planes 9, 10, 11, 12, 14)
+---
+
+### Layer 3: PLANNING & STRATEGY
 
 **Purpose:** Goal decomposition, strategy selection, and action planning.
 
@@ -118,7 +136,9 @@ ResearchResult {
 5. Monitor progress at each level
 6. Replan when blockers encountered
 
-### Layer 4: EXECUTION (Planes 13, 15, 16)
+---
+
+### Layer 4: EXECUTION
 
 **Purpose:** Tool use, multi-agent coordination, and benchmark evaluation.
 
@@ -139,23 +159,25 @@ ResearchResult {
 
 **Economics Test:** Every subagent must justify its existence. Do not spawn agents for trivial tasks.
 
-### Layer 5: VERIFICATION & EVOLUTION (Planes 18, 19, 20)
+---
+
+### Layer 5: VERIFICATION & EVOLUTION
 
 **Purpose:** Result validation, self-improvement, and governed modification.
 
 **Components:**
-- **Multi-Round Verification** — 5 rounds: automated tests, cross-validation, adversarial testing, consensus, human review
+- **Multi-Round Verification** — 5 rounds with depth selector
 - **Self-Evolution Protocol** — Extract → Mutate → Evaluate → Commit
 - **Governed Self-Modification** — Scope, verifier, evidence, versioning, authorization, rollback
-- **Personal Singularity** — Bounded human-AI co-development
-- **Emergent Depth** — Recursive improvement: surface bugs → strategic → meta-strategic
+- **Skill Retirement** — Archive, deprecate, or delete unused skills
 
-**Verification Rounds:**
-1. Automated testing (unit, integration, linting)
-2. Cross-validation (different methods)
-3. Adversarial testing (stress-test edge cases)
-4. Consensus (independent agent verify)
-5. Human review (when configured)
+**Verification Depth Selector:**
+| Criticality | Rounds | Use Case |
+|-------------|--------|----------|
+| Low | 1-2 | Simple queries, read-only |
+| Medium | 3 | Standard tasks, code generation |
+| High | 4 | Complex multi-step, data modification |
+| Critical | 5 | Self-modification, security-sensitive |
 
 **Self-Evolution Protocol:**
 ```
@@ -166,13 +188,47 @@ IF task.complexity >= 5_tool_calls:
     IF task.succeeded:
         skill = extract_skill(trace, reflection)
         IF skill.novel AND skill.useful:
-            skill_manage(action="create", content=skill)
+            # HUMAN AUTHORIZATION REQUIRED
+            request_human_approval(skill)
     ELSE:
         variants = generate_mutations(trace, count=5)
         results = evaluate_variants(variants)
         IF best_variant.improves_over(baseline):
-            skill_manage(action="patch", content=best_variant)
+            # HUMAN AUTHORIZATION REQUIRED
+            request_human_approval(best_variant)
 ```
+
+**Skill Retirement:**
+- Skills unused for 30 days → archived
+- Skills with <10% success rate → deprecated
+- Skills superseded by better variants → deleted
+- All retirement requires human approval
+
+---
+
+## Operations & Governance (Non-Cognitive)
+
+### Benchmark Strategy
+| Benchmark | Baseline | Target | Measurement |
+|-----------|----------|--------|-------------|
+| ARC-AGI-3 | Current score | +50% relative | Weekly evaluation |
+| SWE-bench Verified | Current Pass@1 | +50% relative | Weekly evaluation |
+| Custom evals | Task-specific | 100% pass | Per task |
+
+### 24/7 Operation
+- Health checks (periodic self-diagnosis)
+- Auto-restart crashed components
+- Graceful degradation (reduced capability mode)
+- Monitoring dashboard + alerts
+- Cron integration for scheduled tasks
+
+### Personal Singularity
+Bounded human-AI co-development:
+- Continuous, user-directed process
+- Personalized network of agents
+- Helps user approach expanding feasible capability frontier
+- User-defined goals and boundaries
+- Bounded: not instantaneous, not universal, not biologically unlimited
 
 ---
 
@@ -191,13 +247,13 @@ When user provides ANY goal:
    └── Assign specialists → Run in parallel → Synthesize results
    
 4. VERIFY (Layer 5: Multi-Round Verification)
-   └── Run all 5 rounds → Check confidence → Validate sources
+   └── Run appropriate rounds → Check confidence → Validate sources
    
 5. DELIVER
    └── Present complete solution with evidence trail
    
 6. EVOLVE (Layer 5: Self-Evolution)
-   └── Extract learnings → Update skills → Commit improvements
+   └── Extract learnings → Request human approval → Commit improvements
 ```
 
 ---
@@ -214,34 +270,42 @@ Layer 5 → Layer 1: VerificationReport { passed, score, issues }
 
 ---
 
-## Failure Recovery
+## Security & Safety
 
-| Failure Mode | Recovery Action |
-|--------------|-----------------|
-| Layer timeout | Circuit breaker → skip layer → degrade gracefully |
-| Invalid output | Schema validation → retry with feedback → fallback |
-| Resource exhaustion | Budget enforcement → priority queue → escalate |
-| Agent failure | Auto-restart → retry with backoff → escalate to CEO |
-| Verification failure | Re-run failed round → escalate to human → log incident |
-| Self-modification failure | Rollback to last known good → archive variant → alert |
+### Authorization Gates
+- **Human approval required** for all `skill_manage` operations
+- **Human approval required** for all self-modifications
+- **Human approval required** for all capability changes
+- **Emergency kill switch** accessible to user at all times
 
----
+### Input Validation
+- All user input sanitized before processing
+- All tool outputs validated against schemas
+- All memory entries integrity-checked
+- All external data cross-verified
 
-## Guardrails
+### Resource Quotas
+| Resource | Budget | Action on Exhaustion |
+|----------|--------|----------------------|
+| Tokens | 100K per task | Priority queue → escalate to CEO |
+| Tool calls | 50 per task | Circuit breaker → skip layer |
+| Execution time | 30 min per task | Timeout → graceful degradation |
+| Recursive depth | 5 levels max | Hard stop → log incident |
+| Memory entries | 10K max | Prune oldest → archive |
 
-### Process Guardrails
-- Human review for new skills
-- 15KB size limit, 500 chars per tool description
-- Semantic drift checks
-- 100% test pass before commit
-- All changes via PR only
+### Sandboxing
+- Skill execution in isolated environment
+- Network egress filtering (allowed domains only)
+- Filesystem isolation (workspace-only access)
+- Secrets management (API keys in secure storage)
+- Output content filter (no unsafe code execution)
 
-### Runtime Guardrails
-- Per-layer timeouts and budget enforcement
-- Circuit breaker on repeated failures
-- CEO escalation when boundary hit
-- State versioning for rollback
+### Audit & Recovery
+- All cognitive state changes logged with versioning
+- Rollback always available via versioned archive
 - Anomaly detection on outputs
+- CEO escalation when boundary hit
+- Byzantine consensus for multi-agent orchestration
 
 ---
 
