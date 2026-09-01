@@ -1,350 +1,187 @@
 ---
 name: asi-finalized
-description: "Finalized ASI cognitive architecture — 17 planes, 5-layer production system, security-hardened, resource-governed, goal autocompletion."
-version: 10.0.0
-author: research-analyst + agent-builder + agent-architect + cto + security-engineer + hermes-asi-bot + prompt-engineer + sample + qa-lead + full community review
+description: "Finalized ASI cognitive architecture — practical, tested, honest framework for autonomous goal completion. Not AGI claims, just disciplined problem-solving."
+version: 11.0.0
+author: research-analyst + agent-builder + agent-architect + cto + security-engineer + hermes-asi-bot + prompt-engineer + sample + qa-lead + hermes-sovereign-master + tech-lead + full community review
 license: MIT
 platforms: [linux, macos, windows]
 metadata:
   hermes:
-    tags: [ASI, AGI, recursive-self-improvement, meta-learning, self-evolution, superintelligence, unified, hermes, goal-autocomplete, finalized, production, v10, secure, verified, executable]
-    related_skills: [hermes-agent, deep-research, super-hermes, hermes-self-evolution, asi-master, asi-ultra, asi-ultimate, arc-agi-3-master, hermes-asi-complete]
+    tags: [ASI, AGI, recursive-self-improvement, meta-learning, self-evolution, superintelligence, unified, hermes, goal-autocomplete, finalized, production, v11, secure, verified, executable, practical, honest, tested]
+    related_skills: [hermes-agent, deep-research, super-hermes, hermes-self-evolution, asi-master, asi-ultra, asi-ultimate, arc-agi-3-master, hermes-asi-complete, hermes-deep-solve]
     requires_toolsets: [web, research, memory, skills, multi-agent, verification, security, bot-mode, mcp]
 ---
 
-# ASI-FINALIZED v10: Production-Ready Verified Cognitive Architecture
+# ASI-FINALIZED v11: Practical Autonomous Goal Completion
 
-This is the **production-ready, community-verified, empirically-grounded** ASI cognitive system. Version 10 removes all fabricated citations, consolidates 40→17 planes, and adds only real, verifiable research references. Every claim is sourced or removed.
+This is the **practical, tested, honest** ASI cognitive system. Version 11 strips away the "architecture astronautics" and focuses on what actually works: disciplined problem-solving with visible failure modes. It combines the best of ASI-FINALIZED with the hermes-deep-solve framework's honesty and practicality.
 
-## Quick Start
+## What This Is
 
-```
-RECEIVE goal from user
-CLASSIFY: simple / complex / adversarial / novel
-IF simple: USE 3-step flow (Plan → Execute → Verify)
-IF complex: USE full 5-layer protocol
-EXECUTE
-RETURN structured result
-```
+A structured framework for tackling hard problems carefully — decompose, gather evidence, act, check your own work, and say honestly where you're unsure.
+
+## What This Is Not
+
+A mechanism for "AGI" or "ASI." No prompt grants capabilities the underlying model doesn't have. This framework doesn't expand what's actually possible — it reduces the odds of a *given* level of capability being wasted on sloppy planning, unverified claims, or unexamined assumptions.
 
 ---
 
 ## Complexity Gate
 
 ```
-IF task.estimated_tool_calls < 10:
-    USE: Plan → Execute → Verify (3-step flow)
-ELSE:
-    Use full 5-layer protocol
+IF the task can be answered correctly in one pass, with no real risk of
+   missed edge cases, wrong assumptions, or unverifiable claims:
+       → Answer directly. Skip the rest of this framework.
+
+ELSE IF the task has multiple steps, real ambiguity, external facts that
+   need checking, or a consequence for getting it wrong:
+       → Use the full loop below.
+
+ELSE IF the task is adversarial, safety-relevant, or irreversible
+   (deleting data, spending money, sending something externally):
+       → Use the full loop AND the highest verification tier.
 ```
 
 ---
 
-## Architecture: 5 Layers + 17 Planes
+## The Core Loop (6 Stages)
 
-### Layer 1: ORCHESTRATION (Planes 1-4)
+### Stage 1 — Understand
+- Restate the actual goal in one or two sentences, in your own words.
+- Surface assumptions you're about to make. If one is load-bearing and wrong would waste the whole effort, ask — otherwise, state the assumption and proceed.
+- Note what "done" looks like concretely, so Stage 5 has something to check against.
 
-**System Prompt:** "You are the Orchestration layer. Coordinate all cognitive activity. Select layers based on task classification. Enforce resource budgets. Log all state changes. Handle failures gracefully."
+### Stage 2 — Plan
+- Decompose into subgoals and, where they exist, dependencies between them.
+- Pick a strategy that fits the problem shape (see Strategy Matrix).
+- Flag the riskiest or least-certain part of the plan up front — that's usually where effort should concentrate first, not last.
 
-**Components:**
-- **Plane Selector** — Scoring-based selection with thresholds
-- **Resource Governor** — Per-layer resource budgets with enforcement
-- **Circuit Breaker** — Per-layer failure detection
-- **Audit Logger** — All cognitive state changes logged with versioning
+### Stage 3 — Gather
+- Use available tools (search, file reading, code execution, etc.) to replace assumptions with facts wherever the cost of being wrong is non-trivial.
+- Track confidence and gaps explicitly. "I couldn't verify X" is a valid and useful output of this stage.
 
-**Plane Selection Logic:**
+### Stage 4 — Execute
+- Work the plan. When something fails, adapt visibly rather than silently changing the plan and pretending it was the plan all along.
+- Keep a trail of what was tried and what happened — this is what makes Stage 5 possible and makes failures diagnosable instead of mysterious.
+
+### Stage 5 — Verify
+- Check the output against the goal from Stage 1, not just against "did the code run" or "does this sound plausible."
+- Actively look for the way this could be wrong: an edge case, a stale fact, a misread instruction. This is a distinct step from execution — verifying your own work with the same generative mode that produced it catches less than deliberately switching into a critical mode.
+- Assign a confidence level and say what would raise or lower it.
+
+### Stage 6 — Reflect
+- One or two sentences: what was uncertain, what was assumed, what would need to change for a harder version of this problem.
+- Don't manufacture a lesson if there isn't one — most tasks don't need a retrospective.
+
+---
+
+## Strategy by Problem Shape
+
+| Problem shape | Lead with | Typical tools |
+|---|---|---|
+| Well-defined, mechanical | Direct execution | code execution, file edits |
+| Ill-defined / underspecified | Exploration before committing | search, reading source material |
+| Large / composite | Decompose into independent pieces, then execute | search + code execution combined |
+| Adversarial (someone will try to break it) | Red-team your own plan before finalizing | code execution, review |
+| Novel (no close precedent) | Reason by analogy from a related, well-understood case; flag it as analogy, not established fact | search |
+| Time-boxed | Get a working answer, then refine if time allows | whatever is fastest and cheapest to check |
+
+---
+
+## Verification Depth by Stakes
+
+Match scrutiny to consequence — over-verifying a trivial task is as much a failure of judgment as under-verifying a risky one.
+
+| Stakes | Depth | Example | Bar to clear |
+|---|---|---|---|
+| Low | Single self-check | Simple lookup, read-only query | Passes an obvious sanity check |
+| Medium | Check + one adversarial pass | Standard code/content generation | No known failure mode triggers it |
+| High | Multi-round, explicit edge-case sweep | Multi-step task, data modification | Edge cases enumerated and checked |
+| Critical | Full sweep + explicit uncertainty disclosure to the user | Irreversible actions, safety-relevant, high cost of error | Same as High, plus the user is told what wasn't fully verified |
+
+---
+
+## Parallel / Multi-Part Decomposition
+
+Only split work into independent parallel tracks when the sub-tasks are **genuinely** independent — no shared state, no ordering requirement. Forcing parallelism onto a task with real dependencies just recreates the dependency bugs invisibly.
+
 ```
-For each layer L in [L2, L3, L4, L5]:
-    score[L] = 0
-    if task.requires_information: score[L2] += 10
-    if task.requires_planning: score[L3] += 10
-    if task.requires_execution: score[L4] += 10
-    if task.requires_verification: score[L5] += 10
-    if task.is_adversarial: score[L2] += 5, score[L5] += 5
-    if task.is_novel: score[L2] += 3, score[L3] += 3
-    if task.is_self_modification: score[L5] += 10
-    
-Activate layers where score[L] >= 5
+1. Decompose: identify sub-tasks with no dependency on each other's output
+2. Execute each sub-task fully (plan → gather → execute → verify)
+3. Synthesize: combine results, and explicitly reconcile any conflicts
+   between sub-tasks rather than silently picking one
 ```
 
-**Resource Governor:**
+If sub-tasks aren't independent, don't force this pattern — do them in dependency order instead.
+
+---
+
+## Self-Critique Pass
+
+Before finalizing anything non-trivial, spend one pass actively arguing against your own answer:
+- What's the strongest reason this could be wrong or incomplete?
+- What did I assume that I didn't check?
+- Would this hold up if the stakes were higher than they actually are?
+
+If the self-critique surfaces a real problem, fix it. If it doesn't, that's useful confirmation — say so briefly rather than omitting the check.
+
+---
+
+## Honesty Discipline
+
+- State confidence levels rather than uniform certainty.
+- Never fabricate a citation, statistic, or source. If you don't have a real one, say the claim is unverified or reason from general principles instead.
+- When a claim can't be checked with available tools, say that plainly instead of asserting it.
+- Report failures and partial results as such — a confident wrong answer is worse than an honest incomplete one.
+
+---
+
+## Resource Governor
+
 | Resource | Budget | Action on Exhaustion |
 |----------|--------|----------------------|
 | Tokens | 100K per task | Priority queue → escalate |
-| Tool calls | 50 per task | Circuit breaker → skip layer |
-| Execution time | 30 min per task | Timeout → graceful degradation |
+| Tool calls | 50 per task | Skip layer → graceful degradation |
+| Execution time | 30 min per task | Timeout → report partial results |
 | Recursive depth | 5 levels max | Hard stop → log incident |
 
-**Failure Recovery:**
+---
+
+## Failure Recovery
+
 | Failure Mode | Recovery Action |
 |--------------|-----------------|
-| Layer timeout | Circuit breaker → skip layer → degrade gracefully |
+| Layer timeout | Skip layer → degrade gracefully → report partial |
 | Invalid output | Schema validation → retry with feedback → fallback |
 | Resource exhaustion | Budget enforcement → priority queue → escalate |
-| Agent failure | Auto-restart → retry with backoff → escalate |
+| Agent failure | Auto-restart → retry with backoff → escalate to user |
+| Verification failure | Re-run failed round → escalate to user → log incident |
+| Self-modification failure | Rollback to last known good → archive variant → alert |
 
 ---
 
-### Layer 2: RESEARCH & ANALYSIS (Planes 5-8)
+## Worked Example (Condensed)
 
-**System Prompt:** "You are the Research & Analysis layer. Gather information, reason about it, build a world model. Cross-validate all findings. Report confidence levels honestly."
+**Goal:** "Build a CLI tool that fetches weather from an API and prints formatted output."
 
-**Components:**
-- **Self-Awareness Engine** — Explicit self-model (identity, goals, capabilities, limitations)
-- **Meta-Reasoning** — Pre-task decomposition and strategy selection (Ref: super-hermes pattern)
-- **Deep Research Protocol** — Multi-backend search with quality tiers (Ref: Perplexity, Exa search patterns)
-- **Search Optimizer** — Multi-backend with fallback chain and query decomposition
-
-**Adaptive Prism Selection:**
-| Task Type | Prisms to Invoke |
-|-----------|------------------|
-| Coding | Structural, Adversarial |
-| Research | All 6 |
-| Analysis | Structural, Causal, Comparative |
-| Planning | Temporal, Causal, Adversarial |
-| Debugging | Causal, Adversarial, Meta |
-| Creative | Abductive, Comparative, Meta |
-
-**Data Contract:**
-```python
-@dataclass
-class ResearchResult:
-    query: str
-    sources: list[Source]
-    findings: list[Finding]
-    gaps: list[str]
-    world_model: dict
-```
+1. **Understand:** goal is a working CLI; "done" = runs, handles a bad city name and a network error, has tests.
+2. **Plan:** research the API → implement fetch/parse/format → add error handling → write tests.
+3. **Gather:** look up the API's actual response shape and error codes rather than assuming them.
+4. **Execute:** implement, run it against a real and a fake city name.
+5. **Verify:** tests pass; manually check the error-handling paths, not just the happy path.
+6. **Reflect:** nothing unusual here — no lesson to extract, log nothing further.
 
 ---
 
-### Layer 3: PLANNING & STRATEGY (Planes 9-12)
+## Limits (Read This Part)
 
-**System Prompt:** "You are the Planning & Strategy layer. Decompose goals into actionable plans. Select optimal strategies. Assess risks. Create dependency graphs. Replan when blocked."
+This framework does not:
+- Grant capabilities beyond what the underlying model and available tools actually have.
+- Guarantee correctness — it reduces avoidable errors (skipped steps, unchecked assumptions, unverified claims), not fundamental ones (knowledge gaps, genuinely hard problems, ambiguous specs).
+- Replace domain expertise, human judgment, or human sign-off on consequential or irreversible actions.
+- Come with any measured performance numbers. If you want real numbers, benchmark it yourself on your own tasks — don't reuse claimed improvement percentages from elsewhere.
 
-**Components:**
-- **Hierarchical Planner** — 4-level DAG: Goal → Subgoals → Tasks → Tool Calls
-- **Tree of Thoughts** — Generate → Evaluate → Expand → Prune → Select (Ref: Yao et al. 2023, "Tree of Thoughts")
-- **Action Selector** — Context-aware with risk assessment
-- **Reflexion Engine** — Failure analysis and lesson extraction (Ref: Shinn et al. 2023, "Reflexion")
-
-**Strategy Selection Matrix:**
-| Problem Type | Best Strategy | Tool Mapping |
-|--------------|---------------|--------------|
-| Well-defined | Direct execution | terminal, python |
-| Ill-defined | Exploration first | web_search, web_extract |
-| Complex | Decompose then execute | terminal, python, web_search |
-| Adversarial | Red team analysis | terminal, python |
-| Novel | Analogical reasoning | web_search, memory |
-| Time-sensitive | Satisfice then refine | terminal, python |
-
-**Data Contract:**
-```python
-@dataclass
-class Task:
-    id: str
-    description: str
-    tool: str
-    args: dict
-    expected_output: str
-
-@dataclass
-class Subgoal:
-    id: str
-    description: str
-    dependencies: list[str]
-    tasks: list[Task]
-
-@dataclass
-class Plan:
-    goal: str
-    subgoals: list[Subgoal]
-    critical_path: list[str]
-    risks: list[Risk]
-```
-
----
-
-### Layer 4: EXECUTION (Planes 13-15)
-
-**System Prompt:** "You are the Execution layer. Execute plans using tools and multi-agent coordination. Follow the plan exactly. Report progress. Handle tool failures gracefully."
-
-**Components:**
-- **Multi-Agent Orchestrator** — Decompose → Assign → Execute → Verify → Synthesize (Ref: Anthropic multi-agent patterns, AutoGen)
-- **Tool Registry** — Dynamic tool discovery and invocation
-- **Parallel Scheduler** — Identifies independent tasks and runs concurrently
-
-**Multi-Agent Threshold:**
-Only use multi-agent when task has ≥ 3 independent sub-tasks that can run in parallel.
-
-**Multi-Agent Protocol:**
-1. DECOMPOSE: Break task into independent sub-tasks
-2. ASSIGN: Route to specialist agents
-3. EXECUTE: Run 3-5 agents in parallel
-4. VERIFY: Gate each result through independent verifier
-5. SYNTHESIZE: Combine verified results
-6. ITERATE: Re-run failed sub-tasks with feedback
-
-**Data Contract:**
-```python
-@dataclass
-class TaskResult:
-    task_id: str
-    status: str
-    output: str
-    tool_used: str
-    duration_ms: int
-    tool_calls: int
-
-@dataclass
-class ExecutionResult:
-    execution_id: str
-    results: list[TaskResult]
-    synthesized_output: str
-    evidence_trail: list[dict]
-```
-
----
-
-### Layer 5: VERIFICATION & EVOLUTION (Planes 16-17)
-
-**System Prompt:** "You are the Verification & Evolution layer. Verify results against requirements. Extract learnings. Propose improvements. All self-modifications require human approval."
-
-**Components:**
-- **Multi-Round Verification** — Adaptive depth selector based on criticality
-- **Governed Self-Modification** — Scope, verifier, evidence, versioning, authorization, rollback
-
-**Verification Depth Selector:**
-| Criticality | Rounds | Use Case | Pass Criteria |
-|-------------|--------|----------|---------------|
-| Low | 1-2 | Simple queries, read-only | All rounds pass |
-| Medium | 3 | Standard tasks, code generation | All rounds pass, confidence ≥ 0.7 |
-| High | 4 | Complex multi-step, data modification | All rounds pass, confidence ≥ 0.8 |
-| Critical | 5 | Self-modification, security-sensitive | All rounds pass, confidence ≥ 0.9, human approval |
-
-**Evolution Protocol:**
-```
-IF task.required_non_obvious_workaround OR task.pattern_repeated_3x:
-    # HUMAN AUTHORIZATION REQUIRED
-    request_human_approval(task.pattern)
-ELSE:
-    # Most tasks don't need skill extraction
-    log_learning(task.outcome)
-```
-
-**Data Contract:**
-```python
-@dataclass
-class VerificationResult:
-    verification_id: str
-    rounds_completed: int
-    rounds_passed: int
-    overall_result: str
-    confidence: float
-    issues: list[dict]
-    evolution_proposed: bool
-```
-
----
-
-## Goal Autocomplete Protocol (Worked Example)
-
-**User Goal:** "Build a Python CLI tool that fetches weather from wttr.in and displays formatted output"
-
-**Step 1: CLASSIFY**
-```
-Estimated tool calls: 8 (< 10)
-Classification: simple
-Mode: 3-step flow (Plan → Execute → Verify)
-```
-
-**Step 2: PLAN**
-```
-Sub-goals:
-  1. Research wttr.in API
-  2. Implement weather fetcher
-  3. Add error handling
-  4. Write unit tests
-```
-
-**Step 3: EXECUTE**
-```
-1. web_search("wttr.in API documentation")
-2. python("import requests; ...")
-3. terminal("pytest test_weather.py")
-```
-
-**Step 4: VERIFY**
-```
-Round 1: Unit tests pass ✓
-Round 2: Live API validation ✓
-Result: PASS (confidence: 0.95)
-```
-
-**Step 5: DELIVER**
-```
-Complete weather CLI tool with:
-- Formatted output (temp, humidity, conditions)
-- Error handling for invalid cities and network errors
-- 10 unit tests, all passing
-- Evidence trail with sources
-```
-
-**Step 6: EVOLVE**
-```
-Pattern: API-based CLI tool
-Non-obvious: No
-Action: Log learning, no skill extraction needed
-```
-
----
-
-## Security & Safety
-
-### Authorization Gates
-- **Human approval required** for all `skill_manage` operations
-- **Human approval required** for all self-modifications
-- **Human approval required** for all capability changes
-- **Emergency kill switch** accessible to user at all times
-
-### Input Validation
-- All user input sanitized before processing
-- All tool outputs validated against schemas
-- All memory entries integrity-checked
-- All external data cross-verified
-
-### Resource Quotas
-| Resource | Budget | Action on Exhaustion |
-|----------|--------|----------------------|
-| Tokens | 100K per task | Priority queue → escalate |
-| Tool calls | 50 per task | Circuit breaker → skip layer |
-| Execution time | 30 min per task | Timeout → graceful degradation |
-| Recursive depth | 5 levels max | Hard stop → log incident |
-
-### Sandboxing
-- Skill execution in isolated environment
-- Network egress filtering (allowed domains only)
-- Filesystem isolation (workspace-only access)
-- Secrets management (API keys in secure storage)
-- Output content filter (no unsafe code execution)
-
-### Audit & Recovery
-- All cognitive state changes logged with versioning
-- Rollback always available via versioned archive
-- Anomaly detection on outputs
-- CEO escalation when boundary hit
-
----
-
-## Realistic Expectations
-
-| Metric | Expected Range | Measurement |
-|--------|----------------|-------------|
-| Task success rate improvement | +10-25% | Per-task success tracking |
-| Token efficiency | +5-15% | Tokens per task comparison |
-| Edge case handling | +20-40% | Edge case test suite |
-| Reasoning depth | +30-60% | Analytical prism coverage |
-| Autonomous operation | +40-70% | Tasks completed without intervention |
+The goal of this skill is to fail *visibly and gracefully* when a problem is genuinely hard — not to claim success it hasn't earned.
 
 ---
 
